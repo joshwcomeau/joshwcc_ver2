@@ -1,40 +1,51 @@
 source 'https://rubygems.org'
 
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Default Rails gems
 gem 'rails', '4.1.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-# Use SCSS for stylesheets
+gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 0.4.0',         group: :doc
+gem 'spring',                   group: :development
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
-# Use unicorn as the app server
-# gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'annotate'                      # Provides Schema-like annotations on the models' rb files.
+gem 'autoprefixer-rails'            # Adds CSS vendor prefixes.
+gem 'bower-rails'                   # Front-end package manager.
+gem 'carrierwave'                   # File upload handling.
+gem 'fastimage'                     # Quickly get external image resolutions without downloading/saving the image.
+gem 'gon'                           # Pass data from Rails to JS in a nice, tidy way
+gem 'puma'                          # App server that handles concurrency better than WEBrick.
+gem 'quiet_assets'                  # Hides asset stuff from the console.
+gem 'rest-client'                   # A simple HTTP and REST client for Ruby (used for API calls)
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+
+group :development, :test do 
+  gem 'factory_girl_rails'          # Provides factories for quick creation during tests.
+  gem 'faker'                       # Provides quick data for seeds and tests
+  gem 'pry'                         # Alternative console, allows for JS-style breakpoints.
+  gem 'pry-byebug'                  # A Pry augmentor, provides convenience methods like 'next'.
+  gem 'rspec-rails'                 # Testing framework. Better than what's included with Rails.
+end 
+
+group :test do 
+  gem 'capybara'                    # Used for feature (browser-based) tests.
+  gem 'capybara-webkit'             # Allows feature tests to run in a headless webkit state. Faster, but you can't see the magic.
+  gem 'capybara-angular'            # Allows feature tests to work with Angular
+  gem 'database_cleaner'            # Wipes the database between tests.
+  gem 'guard-rspec'                 # Watches files for automated test running.
+  gem 'launchy'                     # Launches a browser to show the state of a feature test. Useful for debugging
+  gem 'selenium-webdriver'          # Allows feature tests to run in the browser. Slower, but you can see the magic.
+end
+
+
+# Deployment gems
+# gem 'capistrano', '~> 3.1.0'
+# gem 'capistrano-bundler', '~> 1.1.2'
+# gem 'capistrano-rails', '~> 1.1.1'
+# gem 'capistrano-rbenv', '~> 2.0'
+# gem 'capistrano3-puma'
 
