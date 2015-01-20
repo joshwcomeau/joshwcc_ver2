@@ -1,1 +1,1 @@
-angular.module('joshwcc', []);
+angular.module('joshwcc', ['ngAnimate-animate.css']);

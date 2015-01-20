@@ -24,7 +24,9 @@
 
 <section class="projects">
   <ul>
-    <li ng-repeat="project in home.projects">
+    <li ng-repeat="project in home.projects" ng-mouseenter="home.focusedProject = project">
+      <div class="project-label" ng-show="home.focusedProject === project">{{project}}</div>
+      <div class="backdrop" ng-show="home.focusedProject === project"></div>
       <img ng-src="/assets/{{project | lowercase | normalizeName }}_thumb.png">
     </li>
   </ul> 
