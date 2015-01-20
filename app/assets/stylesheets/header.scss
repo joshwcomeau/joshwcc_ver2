@@ -1,10 +1,11 @@
 @import 'variables';
 
-.intro-blurb {
+body > header {
   position: relative;
   z-index: 2;
   background: $blue;
   text-align: center;
+  padding-bottom: 2rem;
 
   .my-face {
     position: absolute;
@@ -17,28 +18,54 @@
     width: 12rem;
     height: 12rem;
     overflow: hidden;
+    transition: 0.6s;
+    // border-bottom: 6px solid darken($blue, 15%);
+
+    img {
+      position: absolute;
+      z-index: 1;
+      top: -11rem;
+      left: -11rem;
+      margin: auto;
+      width: 34rem;
+      height: 34rem;
+      transition: 0.6s;
+
+    }
+
+    .text-helper {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      bottom: -22rem;
+      height: 11rem;
+      width: 100%;
+      background: $blue;
+      transition: 1s;
+      opacity: 0;
+    }
 
     &:hover {
-      width: 20rem;
-      height: 20rem;
-      top: -2rem;
+      width: 34rem;
+      height: 34rem;
+      top: -9rem;
       transition: 0.4s;
+      border-bottom: 0;
 
       img {
         top: 0;
         left: 0;
         transition: 0.4s;
       }
+
+      .text-helper {
+        bottom: 0;
+        transition: 0.3s;
+        opacity: 0.9;
+      }
     }
 
-    img {
-      position: absolute;
-      top: -4rem;
-      left: -4rem;
-      margin: auto;
-      width: 20rem;
-      height: 20rem;
-    }
+
   }
   .my-face-spacer {
     position: relative;
@@ -48,16 +75,32 @@
   .headings {
     position: relative;
     z-index: 2;
-    top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
 
     h1 {
+      color: $yellow;
+      position: relative;
 
+      &:after {
+        content: " ";
+        position: absolute;
+        width: 10.5rem;
+        left: 0;
+        right: 0;
+        bottom: -0.4rem;
+        margin: auto;
+        border-bottom: 3px solid $lightgreen;
+      }
     }
     h3 {
-
+      position: relative;
+      padding-top: 1rem;
+      color: $lightblue;
     }
     h5 {
-
+      padding-top: 1rem;
+      color: $lightgrey;
     }
   }
 

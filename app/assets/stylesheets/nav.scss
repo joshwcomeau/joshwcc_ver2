@@ -1,0 +1,26 @@
+@import 'variables';
+
+body > nav {
+  position: relative;
+  z-index: 3;
+  background: $darkgrey;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #FFF;
+  font-weight: 500;
+
+  li {
+    display: inline-block;
+    padding: 0 1rem;
+    margin: 0 0.25rem;
+    cursor: pointer;
+
+    &.active {
+      background: $green;
+      font-weight: 700;
+    }
+
+  }
+}
