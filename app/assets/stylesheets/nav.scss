@@ -1,15 +1,22 @@
 @import 'variables';
+$nav-height: 4rem;
 
 body > nav {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   background: $darkgrey;
-  height: 4rem;
-  line-height: 4rem;
+  height: $nav-height;
+  line-height: $nav-height;
   text-align: center;
   font-size: 1.5rem;
   color: #FFF;
   font-weight: 500;
+
+  &.fixed-from-top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
 
   li {
     display: inline-block;
