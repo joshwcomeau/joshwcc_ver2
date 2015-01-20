@@ -1,6 +1,6 @@
 function HomeController($scope, $attrs) {
   var home = this;
-  this.tagline = "Boo!";
+  this.projects = gon.projects;
 }
 
 
