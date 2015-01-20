@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="joshwcc">
 <head>
   <title>Joshwcc</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -8,7 +8,7 @@
   <script>try{Typekit.load();}catch(e){}</script>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-controller="HomeController as home">
 
 <%= yield %>
 
