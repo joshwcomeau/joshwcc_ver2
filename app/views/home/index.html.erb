@@ -12,13 +12,13 @@
   </div>
 </header>
 
-<nav follow-scroll>
+<nav follow-scroll nav-highlight sections="projects,skillset,about">
   <ul>
-    <li class="active">Projects</li><!-- 
- --><li>Skillset</li><!--
- --><li>About</li><!-- 
- --><li>Blog</li><!-- 
- --><li>Contact</li>
+    <li ng-class="{active: home.activeSection === 'projects'}">Projects</li><!-- 
+ --><li ng-class="{active: home.activeSection === 'skillset'}">Skillset</li><!--
+ --><li ng-class="{active: home.activeSection === 'about'}">About</li><!-- 
+ --><li ng-class="{active: home.activeSection === 'blog'}">Blog</li><!-- 
+ --><li ng-class="{active: home.activeSection === 'contact'}">Contact</li>
   </ul>
 </nav>
 <div class="nav-spacer"></div>
@@ -32,3 +32,7 @@
     </li>
   </ul> 
 </section>
+
+<section class="skillset" style="height: 600px; background: #F00;"></section>
+
+<section class="about" style="height: 600px; background: #00F;"></section>
