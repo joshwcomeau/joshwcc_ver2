@@ -11,6 +11,7 @@ body > nav {
   font-size: 1.5rem;
   color: #FFF;
   font-weight: 500;
+  box-shadow: 0px 1rem 0px $lightgrey;
 
   &.fixed-from-top {
     position: fixed;
@@ -22,6 +23,7 @@ body > nav {
     display: inline-block;
     padding: 0 1rem;
     margin: 0 0.25rem;
+    height: $nav-height;
     cursor: pointer;
 
     &.active {
