@@ -1,1 +1,1 @@
-angular.module('joshwcc', ['ngResource', 'ngAnimate-animate.css']);
+angular.module('joshwcc', ['ngResource', 'ngSanitize', 'ngAnimate-animate.css']);
