@@ -27,5 +27,6 @@ function viewProject(Project) {
     }
   };
 }
+
 viewProject.$inject = ['Project'];
 angular.module('joshwcc').directive('viewProject', ['Project', viewProject]);
