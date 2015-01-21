@@ -13,18 +13,128 @@ end
 Project.destroy_all
 
 
-projects = [ "#paid", "HungryBelly", "ColourMatch", "CLYWmparison", "Percentext", "Schedulr", "Mars Rover", "This Portfolio", "Conway's Game of Life", "Earthy" ].reverse
+Project.create([ 
+  {
+    display_name: "#paid",
+    thumb_path: "paid_thumb.png",
+    colour: "#222222",
+    stack: "Rails, PostgreSQL, Angular.js, Firebase",
+    demo_link: "http://www.hashtagpaid.com",
+    github_link: nil,
+    project_type: "Full-time Employment",
+    project_length: "6 months",
+    integration: "Twitter API, Instagram API, Stripe",
+    content: '<p>#paid is an influencer marketing platform that lets brands connect and collaborate with social media influencers for sponsored posts. I was hired as lead back-end developer to build the platform from scratch.</p>
+    <p>The platform features a bid-based campaign marketplace, a workroom with real-time chat & file transfer, a payment escrow system with Stripe, and detailed social media analytics for the sponsored post.</p>
+    <p>#paid has been featured on TechCrunch and BetaList, and has been used by brands like American Express, Roots, Microsoft, Danier, Toms and Clean & Clear.</p>' 
+  }, { 
+    display_name:"HungryBelly",
+    thumb_path: "hungrybelly_thumb.png",
+    colour: "#3498db",
+    stack: "Rails, jQuery",
+    demo_link: "http://www.hungrybelly.me",
+    github_link: "https://github.com/joshwcomeau/HungryBelly",
+    project_type: "Hackathon",
+    project_length: "24 hours",
+    integration: "Ordr.in API",
+    content: "<p>Built in 24 hours for the 2014 AngelHackTO hackathon, HungryBelly was a mystery food-delivery service designed to cure decision-paralysis. It won 1st place, and my team and I were flown to San Francisco to pitch at AngelHack's Global Demo Day.</p>
+    <p>HungryBelly is an alternative to the food aggregators like Just-Eat that overwhelm with too many options. Enter your budget, number of servings, and optionally the cuisine you feel like. The Rails back-end finds local restaurants with the ordr.in API, builds a randomized meal set within your budget, and places the order, all behind the scenes; the user doesn't know what they've ordered until it shows up at their door." 
+  }, { 
+    display_name: "ColourMatch",
+    thumb_path: "colourmatch_thumb.png",
+    colour: "#1e1e20",
+    stack: "Rails, PostgreSQL, Angular.js",
+    demo_link: "http://colourmatch.ca",
+    github_link: "https://github.com/joshwcomeau/ColourMatch",
+    project_type: "Open-source tool",
+    project_length: "2 weeks",
+    integration: "500px API",
+    content: "<p>ColourMatch is a search-by-colour tool that helps you find stock photography based on your colour palette.</p>
+    <p>Built from scratch with ImageMagick, a linux image processing tool, I experimented with many statistical and mathematical methods to extract the ideal set of colours from an image. In the end, by combining the most common colours with hue/saturation/brightness outliers, I was able to accurately represent most images in a 4-6 colour palette.</p><p>Images sourced from 500px.</p>"
+  }, { 
+    display_name: "CLYWmparison",
+    thumb_path: "clywmparison_thumb.png",
+    colour: "#643010",
+    stack: "D3.js",
+    demo_link: "http://www.clyw.ca/pages/clywmparison",
+    github_link: "https://github.com/joshwcomeau/CLYWmparison_blogembed",
+    project_type: "Personal Project",
+    project_length: "48 hours",
+    integration: nil,
+    content: "<p>For the past 10 years, I've been an avid yoyo enthusiast. Yoyos have come a long way in recent years, and typically yoyos are compared by 3 primary stats: diameter, width and weight.</p>
+    <p>Using D3.js, I built a yoyo comparison tool that uses a radar graph to display the relative difference in specs. Chris Mikulin, owner of Caribou Lodge Yoyo Works, liked the tool so much that he embedded it in their official site." 
+  }, { 
+    display_name: "Percentext",
+    thumb_path: "percentext_thumb.png",
+    colour: "#30505c",
+    stack: nil,
+    demo_link: "http://www.percentext.com",
+    github_link: "https://github.com/joshwcomeau/percentext",
+    project_type: "Open-source tool",
+    project_length: "1 week",
+    integration: nil,
+    content: "<p>Percentext is a jQuery plugin that dynamically resizes text so that it fills a specified percentage of the available width.</p>
+    <p>Unlike just about every other DOM element, text elements like headers can't be sized by width. This plugin allows front-end developers to style their headings by width instead of font-size, in a dynamic, responsive way."
+  }, { 
+    display_name: "Schedulr",
+    thumb_path: "schedulr_thumb.png",
+    colour: "#30a05a",
+    stack: "Rails, PostgreSQL, jQuery, jQuery UI, Handlebars",
+    demo_link: nil,
+    github_link: "https://github.com/joshwcomeau/Schedulr",
+    project_type: "Bitmaker Labs final project",
+    project_length: "2 weeks",
+    integration: nil,
+    content: "<p>My final project for Bitmaker Labs, Schedulr is a tool to help small/medium sized businesses deal with the hassle of employee scheduling.</p>
+    <p>Featuring a drag-and-drop schedule creator, managers can quickly whip up a schedule for the week. Employees set their availability through their own control panel, consolidating this information in one place for the managers.</p>" 
+  }, { 
+    display_name:  "Mars Rover",
+    thumb_path: "marsrover_thumb.png",
+    colour: "#3d7a00",
+    stack: "Sinatra, CSS3",
+    demo_link: nil,
+    github_link: "https://github.com/joshwcomeau/Mars-Rover-HTML",
+    project_type: "Just for fun",
+    project_length: "48 hours",
+    integration: nil,
+    content: "<p>One of the earlier assignments at Bitmaker Labs was to create a console-based Mars Rover simulator. I decided to create an HTML implementation, with the added challenge that I wanted to see if it was possible without using any Javascript.</p>
+    <p>By using Sinatra to dynamically generate CSS3 keyframe animations on page-load, this Mars Rover will follow a sequence of move/turn instructions provided by the user.</p>" 
+  }, { 
+    display_name:  "Conway's Game of Life",
+    thumb_path: "conwaysgameoflife_thumb.png",
+    colour: "#cd4923",
+    stack: "Javascript",
+    demo_link: "http://www.josh-lab.com/life",
+    github_link: "https://github.com/joshwcomeau/game_of_life",
+    project_type: "Just for fun",
+    project_length: "2-3 days",
+    integration: nil,
+    content: "<p>Conway's Game of Life is a cellular automaton simulator in which cells live, die or reproduce based on their number of neighbors. It leads to hypnotizing graphical flourishes as these 'cells' spread all over the screen.</p>
+    <p>My implementation uses regular DOM elements to represent grids and cells, and the algorithm was built from scratch using Javascript."
+  }, { 
+    display_name:  "Earthy",
+    thumb_path: "earthy_thumb.png",
+    colour: "#345200",
+    stack: "Rails, PostgreSQL, jQuery",
+    demo_link: "http://earthy.herokuapp.com",
+    github_link: "https://github.com/tjalil/earthy",
+    project_type: "Hackathon",
+    project_length: "48 hours",
+    integration: nil,
+    content: "<p>Built as part of the NASA Space Apps Hackathon in mid-2014, our team of 9 Bitmakers built Earthy, a name-that-place trivia game that uses NASA satellite imagery.</p>
+    <p>Named as one of the top-10 global submissions for our category, and with an honourable mention in sustainability, Earthy proved to be an invaluable learning experience."
+  } 
+].reverse)
 
-projects.each do |p|
-  puts "Creating project #{p}"
-
-  Project.create({
-    display_name: p,
-    thumb_path:   "#{normalize_name(p)}_thumb.png",
-    content: "<h1>#{p}</h1><p>This is the great paid thing!</p>"
-  })
-  # Adding a sleep so that there is a clear difference in created_at times, so the order is preserved.
-  sleep 1
-end
-
-
+# { 
+#     display_name:  "Portfolio",
+#     thumb_path: "portfolio_thumb.png",
+#     colour: "#04bfbf",
+#     stack: "Rails, PostgreSQL, Angular.js",
+#     demo_link: "You're on it!",
+#     github_link: "https://github.com/joshwcomeau/joshwcc_ver2",
+#     project_type: "Personal project",
+#     project_length: "3 days",
+#     integration: nil,
+#     content: "How's this for breaking the third wall? The site you're on was built over the course of 3 days using Rails and Angular.js" 
+#   }, 
