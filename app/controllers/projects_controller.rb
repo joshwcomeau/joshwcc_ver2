@@ -4,9 +4,6 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
 
-    respond_to do |format|
-      format.html # renders show.html.erb
-      format.js   # renders show.js.erb
-    end
+    render json: @project
   end
 end

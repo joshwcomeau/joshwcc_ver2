@@ -88,13 +88,94 @@ section.projects {
     right: 0;
     bottom: 0;
 
+    &.ng-hide-remove.ng-hide-remove-active {
+      animation-duration: 0.5s !important;  
+      animation-name: fadeIn;
+      animation-fill-mode: both;
+    }
+    &.ng-hide-add.ng-hide-add-active {
+      animation-duration: 0.3s !important;  
+      animation-name: fadeOut;
+      animation-fill-mode: both;
+    }
+
     .active-project-container {
       position: absolute;
-      top: 1rem;
-      left: 1rem;
-      right: 1rem;
-      bottom: 1rem;
+      width: 75%;
+      max-width: 1000px;
+      max-height: 80%;
+      top: 10%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      padding: 1rem;
+      overflow-y: auto;
       background: $lightgrey;
+
+      &.ng-hide-remove.ng-hide-remove-active {
+        animation-duration: 0.3s !important;  
+        animation-name: fadeInUp;
+        animation-fill-mode: both;
+      }
+      &.ng-hide-add.ng-hide-add-active {
+        animation-duration: 0.2s !important;  
+        animation-name: fadeOutDown;
+        animation-fill-mode: both;
+      }
+    
+      & > header {
+        position: relative;
+        height: 7rem;
+        z-index: 1;
+
+        h3 {
+          position: absolute;
+          left: 1rem;
+          bottom: 1rem;
+          font-size: 2.85rem;
+          font-weight: 700;
+          letter-spacing: -2px;
+          color: #FFF;
+
+          span {
+            display: inline-block;
+            position: relative;
+
+          }
+        }
+      }
+
+      .close {
+        position: absolute;
+        padding: 1rem;
+        right: 1rem;
+        top: 1rem;
+        z-index: 2;
+        cursor: pointer;
+
+        &:hover img {
+          opacity: 1;
+        }
+
+        img {
+          opacity: 0.3;
+          width: 15px;
+          height: 15px;
+        }
+      }
+
+      .content {
+        font-size: 1.75rem;
+        line-height: 1.05em;
+        letter-spacing: -1px;
+        font-weight: 400;
+        padding: 1.5rem;
+        text-align: left;
+
+        p {
+          margin-bottom: 1rem;
+        }
+      }
 
     }
   }
