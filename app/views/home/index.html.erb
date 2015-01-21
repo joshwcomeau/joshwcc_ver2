@@ -24,8 +24,18 @@
 <div class="nav-spacer"></div>
 
 <section class="projects">
+  <div class="modal active-project" modal ng-show="home.activeProject">
+    <div class="active-project-container">
+      {{home.activeProject}}  
+    </div>
+    
+  </div>
   <ul>
-    <li ng-repeat="project in home.projects" ng-mouseenter="home.focusedProject = project" ng-mouseleave="home.focusedProject = null">
+    <li ng-repeat="project in home.projects" 
+    ng-mouseenter="home.focusedProject = project" 
+    ng-mouseleave="home.focusedProject = null"
+    view-project project="{{project}}"
+    >
       <div class="project-label" ng-show="home.focusedProject === project">{{project}}</div>
       <div class="backdrop" ng-show="home.focusedProject === project"></div>
       <img ng-src="/assets/{{project | lowercase | normalizeName }}_thumb.png">

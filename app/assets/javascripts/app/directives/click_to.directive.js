@@ -1,4 +1,4 @@
-function clickTo($window) {
+function clickTo() {
   return {
     restrict: 'A',
     link: function(scope, element, attrs) {
@@ -13,5 +13,4 @@ function clickTo($window) {
   };
 }
 
-clickTo.$inject = ['$window'];
-angular.module('joshwcc').directive('clickTo', ['$window', clickTo]);
+angular.module('joshwcc').directive('clickTo', [clickTo]);
