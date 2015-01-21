@@ -1,5 +1,5 @@
 <header>
-  <div class="my-face">
+  <div class="my-face" ng-click="home.thing = true">
     <div class="text-helper"></div>
     <%= image_tag 'josh_face_68rem.jpg' %>
   </div>
@@ -26,7 +26,7 @@
 <section class="projects">
   <div class="modal active-project" modal ng-show="home.activeProject">
     <div class="active-project-container">
-      {{home.activeProject}} 
+      
     </div>
     
   </div>
@@ -34,7 +34,7 @@
     <li ng-repeat="project in home.projects" 
     ng-mouseenter="home.focusedProject = project" 
     ng-mouseleave="home.focusedProject = null"
-    view-project project="{{project}}"
+    view-project project="{{project.id}}"
     >
       <div class="project-label" ng-show="home.focusedProject === project">{{project.display_name}}</div>
       <div class="backdrop" ng-show="home.focusedProject === project"></div>
@@ -42,6 +42,10 @@
     </li>
   </ul> 
 </section>
+
+<div ng-if="home.thing" style="position: fixed: z-index:1000000; top: 0; width: 100%; height: 100%;" ng-cloak>
+  <img src="http://upload.wikimedia.org/wikipedia/commons/2/2b/GoraBeluha.jpg">
+</div>
 
 <section class="skillset"></section>
 

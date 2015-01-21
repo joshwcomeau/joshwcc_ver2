@@ -1,5 +1,5 @@
 function Project($resource) {
-  return $resource('/projects/:projectName');
+  return $resource('/projects/:id.js');
 }
 
 Project.$inject = ['$resource'];

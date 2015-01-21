@@ -16,7 +16,7 @@ function viewProject(Project) {
         $("html, body").scrollTop(projectOffset - navHeight);
 
         // Fetch our content from the server
-        Project.get({projectName: 'thingo'}, function(success) {
+        Project.get({id: attrs.project}, function(success) {
           // success
           console.log(success);
         }, function(error) {

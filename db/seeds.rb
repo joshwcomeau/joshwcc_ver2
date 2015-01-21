@@ -10,6 +10,8 @@ def normalize_name(name)
   name.downcase.gsub(/[^\w]/i, '')
 end
 
+Project.destroy_all
+
 
 projects = [ "#paid", "HungryBelly", "ColourMatch", "CLYWmparison", "Percentext", "Schedulr", "Mars Rover", "This Portfolio", "Conway's Game of Life", "Earthy" ].reverse
 
@@ -18,7 +20,8 @@ projects.each do |p|
 
   Project.create({
     display_name: p,
-    thumb_path:   "#{normalize_name(p)}_thumb.png"
+    thumb_path:   "#{normalize_name(p)}_thumb.png",
+    content: "<h1>#{p}</h1><p>This is the great paid thing!</p>"
   })
   # Adding a sleep so that there is a clear difference in created_at times, so the order is preserved.
   sleep 1
