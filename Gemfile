@@ -16,9 +16,9 @@ gem 'annotate'                      # Provides Schema-like annotations on the mo
 gem 'autoprefixer-rails'            # Adds CSS vendor prefixes.
 gem 'bower-rails'                   # Front-end package manager.
 gem 'gon'                           # Pass data from Rails to JS in a nice, tidy way
-gem 'puma'                          # App server that handles concurrency better than WEBrick.
 gem 'quiet_assets'                  # Hides asset stuff from the console.
-
+gem 'rails_12factor'                # Heroku wants this.
+gem 'unicorn'                       # better app server.
 
 group :development, :test do 
   gem 'factory_girl_rails'          # Provides factories for quick creation during tests.
