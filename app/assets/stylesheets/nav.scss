@@ -53,5 +53,11 @@ $nav-height: 4rem;
       transition: 0.25s;
     }
 
+    &.clicked {
+      animation-duration: 0.8s !important;  
+      animation-name: auburn-glow;
+      animation-fill-mode: none;
+    }
+
   }
 }
