@@ -2,7 +2,7 @@ function clickTo() {
   return {
     restrict: 'A',
     link: function(scope, element, attrs) {
-      var navHeight = $("body > nav").height(),
+      var navHeight = $(".main-nav").height(),
           newOffset;
 
       element.click(function() {
