@@ -2,11 +2,12 @@ function navHighlight($window) {
   return {
     restrict: 'A',
     link: function(scope, element, attrs) {
-      var navHeight     = $("body > nav").height(),
+      var navHeight     = $(".main-nav").height(),
           sections, windowTop, activeSection;
 
       $($window).on("scroll resize", function() {
-        _.debounce(setActive, 250)();
+        if ( !scope.home.freezeActive ) 
+          _.debounce(setActive, 250)();
       });
 
 
