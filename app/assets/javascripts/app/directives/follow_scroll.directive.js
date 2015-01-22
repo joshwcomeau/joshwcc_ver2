@@ -3,7 +3,7 @@ function followScroll($window) {
     restrict: 'A',
     link: function(scope, element, attrs) {
       var position       = 'relative',
-          initial_offset = attrs.initialOffset || element.offset().top,
+          initial_offset = element.offset().top,
           min_scroll_top = attrs.minScrollTop || 0,
           header_height  = element.height();
 
@@ -25,6 +25,8 @@ function followScroll($window) {
           position = 'relative';
           // remove our spacer
           $(".nav-spacer").remove();
+          // Reset our initial height
+          initial_offset = element.offset().top
         }
 
       });
@@ -34,6 +36,7 @@ function followScroll($window) {
         if ( position === 'fixed' ) 
           setWidthToParent(element)
         else
+          initial_offset = element.offset().top
           element.removeAttr("style");
       });
 
