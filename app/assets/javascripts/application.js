@@ -16,7 +16,6 @@
 //= require angular-animate/angular-animate
 //= require angular-resource/angular-resource
 //= require angular-sanitize/angular-sanitize
-//= require angular-ui-router/release/angular-ui-router
 //= require ngAnimate-animate.css/animate.js
 //= require lodash/dist/lodash
 //= require percentext/percentext.min.js

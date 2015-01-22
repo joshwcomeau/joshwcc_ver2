@@ -4,6 +4,7 @@ section.projects {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 0.5rem;
   text-align: center;
 
   ul {
@@ -80,13 +81,16 @@ section.projects {
   }
 
   .active-project {
-    position: fixed;
-    z-index: 9999;
-    background: rgba(0,0,0,0.75);
+    position: absolute;
+    z-index: 4;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 0.5rem;
+    right: 0.5rem;
     bottom: 0;
+    height: 100%;
+    padding: 0.5rem;
+    background: $lightgrey;
+
 
     &.ng-hide-remove.ng-hide-remove-active {
       animation-duration: 0.5s !important;  
@@ -100,20 +104,12 @@ section.projects {
     }
 
     .active-project-container {
-      position: absolute;
-      width: 75%;
-      max-width: 1000px;
-      max-height: 96%;
-      top: 2%;
-      left: 0;
-      right: 0;
-      margin: auto;
-      overflow-y: auto;
+      position: relative;
       background: $lightgrey;
 
       &.ng-hide-remove.ng-hide-remove-active {
         animation-duration: 0.3s !important;  
-        animation-name: fadeInUp;
+        animation-name: fadeIn;
         animation-fill-mode: both;
       }
       &.ng-hide-add.ng-hide-add-active {

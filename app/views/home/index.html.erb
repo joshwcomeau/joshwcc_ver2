@@ -13,9 +13,20 @@
         <header ng-style="{'background': home.activeProject.colour}">
           <h3><span>{{home.activeProject.display_name}}</span></h3>
         </header>
-        
-        <div class="content" ng-bind-html="home.parseAsHTML(home.activeProject.content)">
+
+        <div class="grid">
+          <div class="content c8" ng-bind-html="home.parseAsHTML(home.activeProject.content)">
+            <!-- injected Angular content goes here -->
+          </div>
+
+          <div class="stats c4">
+            Stack: {{home.activeProject.stack}}
+            Project Type: {{home.activeProject.project_type}}<br>
+            Project Length: {{home.activeProject.project_length}}<br>
+          </div>
         </div>
+        
+        
 
         <div class="project-images">
           <ul>
@@ -25,11 +36,7 @@
           </ul>
         </div>
 
-        <div class="stats">
-          Stack: {{home.activeProject.stack}}
-          Project Type: {{home.activeProject.project_type}}<br>
-          Project Length: {{home.activeProject.project_length}}<br>
-        </div>
+        
       </div>
       
     </div>
@@ -39,6 +46,7 @@
       ng-mouseenter="home.focusedProject = project" 
       ng-mouseleave="home.focusedProject = null"
       ng-click="home.activeProject = project"
+      view-project
       >
         <div class="project-label" ng-show="home.focusedProject === project">{{project.display_name}}</div>
         <div class="backdrop" ng-show="home.focusedProject === project"></div>
