@@ -13,7 +13,7 @@ function viewProject(Project) {
         setTimeout(function() {
           console.log($(".active-project").height())
         $("section.projects").height( $(".active-project").height() + 20 );
-        }, 100);
+        }, 250);
         
       })
     }

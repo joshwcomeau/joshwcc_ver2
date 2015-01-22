@@ -104,6 +104,8 @@ section.projects {
 
     .active-project-container {
       position: relative;
+      max-width: 800px;
+      margin: 0 auto;
       background: #FFF;
 
       &.ng-hide-remove.ng-hide-remove-active {
@@ -139,19 +141,15 @@ section.projects {
             color: #FFF;
             font-size: 1.4rem;
             padding: 0 0.2rem;
+            opacity: 0.6;
+
+            &:hover {
+              opacity: 1;
+              transition: 0.25s;
+            }
           }
         }
 
-        .ext-links {
-          position: absolute;
-          right: 1rem;
-          bottom: 1rem;
-          font-size: 1.2rem;
-
-          a {
-            color: $blue;
-          }
-        }
       }
 
       .close {
@@ -188,9 +186,9 @@ section.projects {
       }
 
       .detail-image {
-        padding: 1.5rem 0;
         img {
           width: 100%;
+          vertical-align: middle;
         }
       }
 
@@ -225,15 +223,24 @@ section.projects {
         .bottom-links {
           text-align: center;
           margin: 0 -1rem -1rem -1rem;
-          padding: 1rem;
           background: rgba(0,0,0,0.5);
 
           a {
+            display: inline-block;
             color: $yellow;
             font-size: 1.4rem;
-            padding: 0 1rem;
+            padding: 1rem;
             text-decoration: none;
             font-weight: 500;
+            transition: 0.2s;
+            width: 40%;
+            text-align: center;
+            
+            &:hover {
+              background: $yellow;
+              color: #000;
+              transition: 0.35s;
+            }
           }
         }
       }

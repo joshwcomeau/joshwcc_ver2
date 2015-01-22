@@ -20,11 +20,11 @@
         </header>
 
         <div class="grid">
-          <div class="content c7" ng-bind-html="home.parseAsHTML(home.activeProject.overview)">
+          <div class="content" ng-bind-html="home.parseAsHTML(home.activeProject.overview)">
             <!-- injected Angular content goes here -->
           </div>
 
-          <div class="detail-image c5">
+          <div class="detail-image">
             <img src="{{home.activeProject.images[0].src}}">
           </div>
         </div>
@@ -40,13 +40,13 @@
               <span class="title">Project Type:</span> {{home.activeProject.project_type}}
             </li><li class="half">
               <span class="title">Project Length:</span> {{home.activeProject.project_length}}
-            </li><li class="half">
+            </li><li class="half" ng-show="home.activeProject.integration">
               <span class="title">Third-Party Integrations:</span> {{home.activeProject.integration}}
-            </li><li class="half">
+            </li><li class="half" ng-show="home.activeProject.stack">
               <span class="title">Stack:</span> {{home.activeProject.stack}}
             </li>
             <li ng-show="home.activeProject.demo_link || home.activeProject.github_link" class="bottom-links">
-              <a ng-href="{{home.activeProject.demo_link}}" ng-show="home.activeProject.demo_link">Demo / Project Page</a> <a ng-href="{{home.activeProject.github_link}}" ng-show="home.activeProject.github_link">GitHub Repo</a>
+              <a ng-href="{{home.activeProject.demo_link}}" ng-show="home.activeProject.demo_link">Project Page</a> <a ng-href="{{home.activeProject.github_link}}" ng-show="home.activeProject.github_link">GitHub Repo</a>
             </li>
           </ul>
         </div>
