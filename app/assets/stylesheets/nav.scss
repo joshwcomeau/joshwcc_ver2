@@ -1,7 +1,7 @@
 @import 'variables';
 $nav-height: 4rem;
 
-body > nav {
+.main-nav {
   position: relative;
   z-index: 4;
   background: $darkgrey;

@@ -5,6 +5,7 @@
     "angular-animate": "latest",
     "angular-resource": "latest",
     "angular-sanitize": "latest",
+    "angular-ui-router": "latest",
     "animate.css": "latest",
     "jquery": "latest",
     "jquery-ujs": "latest",

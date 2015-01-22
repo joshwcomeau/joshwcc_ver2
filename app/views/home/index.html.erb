@@ -1,75 +1,57 @@
-<header>
-  <div class="my-face" ng-click="home.thing = true">
-    <div class="text-helper"></div>
-    <%= image_tag 'josh_face_68rem.jpg' %>
-  </div>
-  <div class="my-face-spacer"></div>
+<div class="main-content" ui-view>
 
-  <div class="headings">
-    <h1>Why hello there!</h1>
-    <h3>I'm Josh, and I'm a full-stack web developer &amp; software engineer.</h4>
-    <h5>For the past year, I've been captivated by code. It's been one hell of a ride.</h6>
-  </div>
-</header>
+  <%= render partial: 'layouts/header' %>
 
-<nav follow-scroll nav-highlight sections="projects,skillset,about">
-  <ul>
-    <li ng-class="{active: home.activeSection === 'projects'}" click-to dest="projects">Projects</li><!-- 
- --><li ng-class="{active: home.activeSection === 'skillset'}" click-to dest="skillset">Skillset</li><!--
- --><li ng-class="{active: home.activeSection === 'about'}" click-to dest="about">About</li><!-- 
- --><li ng-class="{active: home.activeSection === 'blog'}" click-to dest="blog">Blog</li><!-- 
- --><li ng-class="{active: home.activeSection === 'contact'}" click-to dest="contact">Contact</li>
-  </ul>
-</nav>
-<div class="nav-spacer"></div>
+  <%= render partial: 'layouts/nav' %>
 
-<section class="projects">
-  <div class="modal active-project" modal ng-show="home.activeProject">
-    <div class="active-project-container" ng-show="home.activeProject">
-      <div class="close" ng-click="home.activeProject = null">
-        <%= image_tag "cross_white.png" %>
+  <section class="projects">
+    <div class="modal active-project" modal ng-show="home.activeProject">
+      <div class="active-project-container" ng-show="home.activeProject">
+        <div class="close" ng-click="home.activeProject = null">
+          <%= image_tag "cross_white.png" %>
+        </div>
+        <header ng-style="{'background': home.activeProject.colour}">
+          <h3><span>{{home.activeProject.display_name}}</span></h3>
+        </header>
+        
+        <div class="content" ng-bind-html="home.parseAsHTML(home.activeProject.content)">
+        </div>
+
+        <div class="project-images">
+          <ul>
+            <li ng-repeat="img in home.activeProject.images" class="image-li">
+              <img ng-src="/assets/{{img.src}}">    
+            </li>
+          </ul>
+        </div>
+
+        <div class="stats">
+          Stack: {{home.activeProject.stack}}
+          Project Type: {{home.activeProject.project_type}}<br>
+          Project Length: {{home.activeProject.project_length}}<br>
+        </div>
       </div>
-      <header ng-style="{'background': home.activeProject.colour}">
-        <h3><span>{{home.activeProject.display_name}}</span></h3>
-      </header>
       
-      <div class="content" ng-bind-html="home.parseAsHTML(home.activeProject.content)">
-      </div>
-
-      <div class="project-images">
-        <ul>
-          <li ng-repeat="img in home.activeProject.images" class="image-li">
-            <img ng-src="/assets/{{img.src}}">    
-          </li>
-        </ul>
-      </div>
-
-      <div class="stats">
-        Stack: {{home.activeProject.stack}}
-        Project Type: {{home.activeProject.project_type}}<br>
-        Project Length: {{home.activeProject.project_length}}<br>
-      </div>
     </div>
-    
+    <ul>
+      <li class="project-thumb"
+      ng-repeat="project in home.projects" 
+      ng-mouseenter="home.focusedProject = project" 
+      ng-mouseleave="home.focusedProject = null"
+      ng-click="home.activeProject = project"
+      >
+        <div class="project-label" ng-show="home.focusedProject === project">{{project.display_name}}</div>
+        <div class="backdrop" ng-show="home.focusedProject === project"></div>
+        <img ng-src="/assets/{{project.thumb_path}}">
+      </li>
+    </ul> 
+  </section>
+
+  <div ng-if="home.thing" style="position: fixed: z-index:1000000; top: 0; width: 100%; height: 100%;" ng-cloak>
+    <img src="http://upload.wikimedia.org/wikipedia/commons/2/2b/GoraBeluha.jpg">
   </div>
-  <ul>
-    <li class="project-thumb"
-    ng-repeat="project in home.projects" 
-    ng-mouseenter="home.focusedProject = project" 
-    ng-mouseleave="home.focusedProject = null"
-    ng-click="home.activeProject = project"
-    >
-      <div class="project-label" ng-show="home.focusedProject === project">{{project.display_name}}</div>
-      <div class="backdrop" ng-show="home.focusedProject === project"></div>
-      <img ng-src="/assets/{{project.thumb_path}}">
-    </li>
-  </ul> 
-</section>
 
-<div ng-if="home.thing" style="position: fixed: z-index:1000000; top: 0; width: 100%; height: 100%;" ng-cloak>
-  <img src="http://upload.wikimedia.org/wikipedia/commons/2/2b/GoraBeluha.jpg">
+  <section class="skillset"></section>
+
+  <section class="about" style="height: 600px; background: #00F;"></section>
 </div>
-
-<section class="skillset"></section>
-
-<section class="about" style="height: 600px; background: #00F;"></section>
