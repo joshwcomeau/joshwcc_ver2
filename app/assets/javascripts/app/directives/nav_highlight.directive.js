@@ -18,7 +18,7 @@ function navHighlight($window) {
         return _.find(sections, function(section) {
           if ( windowTop >= section.height ) {
             // We've found our active section!
-            return section.name;;
+            return section.name;
           }
         });
       }
