@@ -1,11 +1,11 @@
-<div class="main-content" ui-view>
+<div class="main-content">
 
   <%= render partial: 'layouts/header' %>
 
   <%= render partial: 'layouts/nav' %>
 
   <section class="projects">
-    <div class="active-project" ng-show="home.activeProject">
+    <div class="modal active-project" modal ng-show="home.activeProject">
       <div class="active-project-container" ng-show="home.activeProject">
         <div class="close" close-project>
           <%= image_tag "cross_white.png" %>
@@ -72,7 +72,74 @@
 
 
 
-  <section class="skillset"></section>
+  <section class="skillset">
+    <div class="width-wrapper">
+      <p class="intro">On the front-end to back-end spectrum, I fall somewhere in the middle. I'm passionate about architecting applications from the bottom up, writing well-structured, modular code, handling complex business logic, and finding clever ways to improve performance.</p> 
+      <p class="intro">Here are some of the languages, frameworks, tools and methodologies I feel comfortable with. </p>
+    </div>
+    <div class="lighter">
+      <div class="width-wrapper">
+        <h4 class="skill-group-heading">Languages</h4>
+        <ul class="skill-list">
+          <li>Ruby</li>
+          <li>Javascript</li>
+          <li>Python</li>
+          <li>PHP</li>
+          <li>SQL</li>
+          <li>HTML5 / CSS3</li>
+        </ul>
 
-  <section class="about" style="height: 600px; background: #00F;"></section>
+        <h4 class="skill-group-heading">Libraries / Frameworks</h4>
+        <ul class="skill-list">
+          <li>Ruby on Rails</li>
+          <li>Angular.js</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>jQuery</li>
+          <li>D3.js</li>
+          <li>Sinatra</li>
+          <li>Meteor</li>
+        </ul>
+
+        <h4 class="skill-group-heading">Testing Tools</h4>
+        <ul class="skill-list">
+          <li>RSpec</li>
+          <li>Jasmine</li>
+          <li>Mocha / Chai</li>
+          <li>Protractor</li>
+          <li>Capybara</li>
+        </ul>
+
+        <h4 class="skill-group-heading">Other Skills</h4>
+        <ul class="skill-list">
+          <li>Agile / Scrum</li>
+          <li>Server Administration</li>
+          <li>Linux / Mac CLI</li>
+        </ul>
+   
+      </div>
+    </div>
+  </section>
+
+  <section class="blog">
+    <div class="width-wrapper">
+      <p class="intro">I like writing about my coding experiences. Here are some recent ramblings.</p> 
+
+      <div class="card-holder" ng-repeat="post in home.blogPosts">
+        <div class="card">
+          <a ng-href="{{post.link}}"><img ng-src="{{post.img}}"></a>
+          <div class="description">
+            <h3 class="title"><a ng-href="{{post.link}}">{{post.title}}</a></h3>
+            <p>{{post.desc}}</p>
+            <footer>
+              <h5 class="author">Joshua Comeau</h5>
+              <h6 class="date">{{post.date}}</h6>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </section>
+
+  <section class="contact"></section>
 </div>

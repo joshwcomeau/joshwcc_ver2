@@ -1,6 +1,75 @@
 @import 'variables';
 
 section.skillset {
-  background: $lightblue;
+  background: $lightgreen;
   min-height: 500px;
+
+  .width-wrapper {
+    padding: 2rem 0;
+    max-width: 830px;
+  }
+
+  .lighter {
+    background: lighten($lightgreen, 15%);
+  }
+
+  .section-title {
+    color: $green;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .intro {
+    font-size: 1.8rem;
+    margin: 1rem auto;
+    line-height: 1.2em;
+    letter-spacing: -1px;
+    font-weight: 400;
+    text-align: justify;
+  }
+
+  .skill-group-heading {
+    position: relative;
+    z-index: 2;
+    font-size: 2.6rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: $green;
+    margin-bottom: 0.1rem;
+    text-shadow: 
+      1px 0px 0px lighten($lightgreen, 15%),
+      -1px 0px 0px lighten($lightgreen, 15%),
+      0px 1px 0px lighten($lightgreen, 15%),
+      2px 0px 0px lighten($lightgreen, 15%),
+      -2px 0px 0px lighten($lightgreen, 15%),
+      0px 2px 0px lighten($lightgreen, 15%);
+  }
+
+  .skill-list {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2rem;
+
+    li {
+      display: inline-block;
+      padding: 0.6rem 1.25rem;
+      background: #222;
+      color: #FFF;
+      font-weight: 400;
+      font-size: 1.3rem;
+      border-radius: 2px;
+      letter-spacing: -1px;
+      cursor: default;
+      transition: 0.2s;
+
+      &:hover {
+        background: darken($blue,25%);
+        padding: 0.6rem 1.45rem;
+        transition: 0.2s;
+      }
+    }
+  }
 }

@@ -20,7 +20,7 @@ function clickTo($timeout) {
           
           $timeout(function() {
             scope.home.freezeActive = false;
-          }, 1000);
+          }, 1200);
         })
         
 

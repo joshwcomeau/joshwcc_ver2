@@ -8,6 +8,7 @@ function modal() {
         if ( e.target.className.split(" ")[0] == 'modal' ) {
           scope.$apply(function() {
             scope.home.activeProject = null;
+            $("section.projects").removeAttr("style");
           });
         }
       });

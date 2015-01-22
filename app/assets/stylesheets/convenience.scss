@@ -49,6 +49,11 @@
   // Also requires a given width and height.
 }
 
+.width-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 // Make a series of elements take up equal portions of the full parent width.
 // 3 items = 33.3% each, 4 items = 25%, etc.
 .children-fill-width {

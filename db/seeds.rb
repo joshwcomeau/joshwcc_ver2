@@ -154,7 +154,7 @@ cgol = Project.new({
   project_type: "Just for fun",
   project_length: "2-3 days",
   integration: nil,
-  overview: "<p>Conway's Game of Life is a cellular automaton simulator in which cells live, die or reproduce based on their number of neighbors. It leads to hypnotizing graphical flourishes as these 'cells' spread all over the screen. <a href='http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life'>Wikipedia summarizes it well.</a></p>
+  overview: "<p>Conway's Game of Life is a cellular automaton simulator in which cells live, die or reproduce based on their number of neighbors. It leads to hypnotizing graphical flourishes as these 'cells' spread all over the screen. <a href='http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life' target='_blank'>Wikipedia summarizes it well.</a></p>
   <p>My implementation uses regular DOM elements to represent grids and cells, and the algorithm was built from scratch using Javascript.",
   technical_challenges: "Performance was where I spent much of my energy. My initial algorithm would check the 'state' of every cell during every round. After some experimentation, I realized I only needed to check living cells and their neighbors. This realization allowed for a massive performance boost. The real bottleneck now is the DOM manipulation."
 })

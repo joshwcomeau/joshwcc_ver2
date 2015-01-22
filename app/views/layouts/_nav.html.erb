@@ -1,4 +1,4 @@
-<nav class="main-nav" follow-scroll nav-highlight sections="projects,skillset,about">
+<nav class="main-nav" follow-scroll nav-highlight sections="projects,skillset,about" ng-class="{'yellow-shadow': home.activeSection === 'skillset'}">
   <ul>
     <li class="main-nav-li" ng-class="{active: home.activeSection === 'projects'}" click-to dest="projects">Projects</li><!-- 
  --><li class="main-nav-li" ng-class="{active: home.activeSection === 'skillset'}" click-to dest="skillset">Skillset</li><!--
