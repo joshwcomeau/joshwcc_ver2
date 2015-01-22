@@ -16,7 +16,7 @@ projects = []
 
 paid = Project.new({
   display_name: "#paid",
-  thumb_path: "paid_thumb.png",
+  thumb_path: "https://s3.amazonaws.com/joshwcc/paid_thumb.png",
   colour: "#222222",
   stack: "Rails, PostgreSQL, Angular.js, Firebase",
   demo_link: "http://www.hashtagpaid.com",
@@ -29,8 +29,8 @@ paid = Project.new({
   <p>#paid has been featured on TechCrunch and BetaList, and has been used by brands like American Express, Roots, Microsoft, Danier, Toms and Clean & Clear.</p>' 
 })
 
-paid.images << Image.new(src: 'browse_campaigns.png', placement: 0)
-paid.images << Image.new(src: 'browse_celebrities.png', placement: 0)
+paid.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/browse_campaigns.jpg', placement: 0)
+paid.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/browse_celebrities.jpg', placement: 0)
 
 projects << paid
 
@@ -38,7 +38,7 @@ projects << paid
 Project.create([ 
   { 
     display_name:"HungryBelly",
-    thumb_path: "hungrybelly_thumb.png",
+    thumb_path: "https://s3.amazonaws.com/joshwcc/hungrybelly_thumb.png",
     colour: "#3498db",
     stack: "Rails, jQuery",
     demo_link: "http://www.hungrybelly.me",
@@ -50,7 +50,7 @@ Project.create([
     <p>HungryBelly is an alternative to the food aggregators like Just-Eat that overwhelm with too many options. Enter your budget, number of servings, and optionally the cuisine you feel like. The Rails back-end finds local restaurants with the ordr.in API, builds a randomized meal set within your budget, and places the order, all behind the scenes; the user doesn't know what they've ordered until it shows up at their door." 
   }, { 
     display_name: "ColourMatch",
-    thumb_path: "colourmatch_thumb.png",
+    thumb_path: "https://s3.amazonaws.com/joshwcc/colourmatch_thumb.png",
     colour: "#1e1e20",
     stack: "Rails, PostgreSQL, Angular.js",
     demo_link: "http://colourmatch.ca",
@@ -62,7 +62,7 @@ Project.create([
     <p>Built from scratch with ImageMagick, a linux image processing tool, I experimented with many statistical and mathematical methods to extract the ideal set of colours from an image. In the end, by combining the most common colours with hue/saturation/brightness outliers, I was able to accurately represent most images in a 4-6 colour palette.</p><p>Images sourced from 500px.</p>"
   }, { 
     display_name: "CLYWmparison",
-    thumb_path: "clywmparison_thumb.png",
+    thumb_path: "https://s3.amazonaws.com/joshwcc/clywmparison_thumb.png",
     colour: "#643010",
     stack: "D3.js",
     demo_link: "http://www.clyw.ca/pages/clywmparison",
@@ -74,7 +74,7 @@ Project.create([
     <p>Using D3.js, I built a yoyo comparison tool that uses a radar graph to display the relative difference in specs. Chris Mikulin, owner of Caribou Lodge Yoyo Works, liked the tool so much that he embedded it in their official site." 
   }, { 
     display_name: "Percentext",
-    thumb_path: "percentext_thumb.png",
+    thumb_path: "https://s3.amazonaws.com/joshwcc/percentext_thumb.png",
     colour: "#30505c",
     stack: nil,
     demo_link: "http://www.percentext.com",
@@ -86,7 +86,7 @@ Project.create([
     <p>Unlike just about every other DOM element, text elements like headers can't be sized by width. This plugin allows front-end developers to style their headings by width instead of font-size, in a dynamic, responsive way."
   }, { 
     display_name: "Schedulr",
-    thumb_path: "schedulr_thumb.png",
+    thumb_path: "https://s3.amazonaws.com/joshwcc/schedulr_thumb.png",
     colour: "#30a05a",
     stack: "Rails, PostgreSQL, jQuery, jQuery UI, Handlebars",
     demo_link: nil,
@@ -98,7 +98,7 @@ Project.create([
     <p>Featuring a drag-and-drop schedule creator, managers can quickly whip up a schedule for the week. Employees set their availability through their own control panel, consolidating this information in one place for the managers.</p>" 
   }, { 
     display_name:  "Mars Rover",
-    thumb_path: "marsrover_thumb.png",
+    thumb_path: "https://s3.amazonaws.com/joshwcc/marsrover_thumb.png",
     colour: "#3d7a00",
     stack: "Sinatra, CSS3",
     demo_link: nil,
@@ -110,7 +110,7 @@ Project.create([
     <p>By using Sinatra to dynamically generate CSS3 keyframe animations on page-load, this Mars Rover will follow a sequence of move/turn instructions provided by the user.</p>" 
   }, { 
     display_name:  "Conway's Game of Life",
-    thumb_path: "conwaysgameoflife_thumb.png",
+    thumb_path: "https://s3.amazonaws.com/joshwcc/conwaysgameoflife_thumb.png",
     colour: "#cd4923",
     stack: "Javascript",
     demo_link: "http://www.josh-lab.com/life",
@@ -122,7 +122,7 @@ Project.create([
     <p>My implementation uses regular DOM elements to represent grids and cells, and the algorithm was built from scratch using Javascript."
   }, { 
     display_name:  "Earthy",
-    thumb_path: "earthy_thumb.png",
+    thumb_path: "https://s3.amazonaws.com/joshwcc/earthy_thumb.png",
     colour: "#345200",
     stack: "Rails, PostgreSQL, jQuery",
     demo_link: "http://earthy.herokuapp.com",

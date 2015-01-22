@@ -20,7 +20,7 @@
         <div class="project-images">
           <ul>
             <li ng-repeat="img in home.activeProject.images" class="image-li">
-              <img ng-src="/assets/{{img.src}}">    
+              <img ng-src="{{img.src}}">    
             </li>
           </ul>
         </div>
@@ -42,7 +42,7 @@
       >
         <div class="project-label" ng-show="home.focusedProject === project">{{project.display_name}}</div>
         <div class="backdrop" ng-show="home.focusedProject === project"></div>
-        <img ng-src="/assets/{{project.thumb_path}}">
+        <img ng-src="{{project.thumb_path}}">
       </li>
     </ul> 
   </section>
