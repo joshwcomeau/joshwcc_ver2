@@ -8,6 +8,13 @@ function viewProject(Project) {
       element.click(function() {
         // Scroll to the top of projects
         $("html, body").animate({ scrollTop: (projectOffset - navHeight) }, 250);
+
+        // Set the project height equal to the child height.
+        setTimeout(function() {
+          console.log($(".active-project").height())
+        $("section.projects").height( $(".active-project").height() + 20 );
+        }, 100);
+        
       })
     }
   };

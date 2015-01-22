@@ -5,17 +5,18 @@
   <%= render partial: 'layouts/nav' %>
 
   <section class="projects">
-    <div class="modal active-project" modal ng-show="home.activeProject">
+    <div class="active-project" ng-show="home.activeProject">
       <div class="active-project-container" ng-show="home.activeProject">
-        <div class="close" ng-click="home.activeProject = null">
+        <div class="close" close-project>
           <%= image_tag "cross_white.png" %>
         </div>
         <header ng-style="{'background': home.activeProject.colour}">
-          <h3><span>{{home.activeProject.display_name}}</span></h3>
-          <div class="ext-links">
+          <h3>
+            <span>{{home.activeProject.display_name}}</span>
             <a ng-href="{{home.activeProject.demo_link}}" ng-show="home.activeProject.demo_link"><i class="fa fa-external-link"></i></a> 
             <a ng-href="{{home.activeProject.github_link}}" ng-show="home.activeProject.github_link"><i class="fa fa-github"></i></a>
-          </div>
+          </h3>
+            
         </header>
 
         <div class="grid">
@@ -44,8 +45,7 @@
             </li><li class="half">
               <span class="title">Stack:</span> {{home.activeProject.stack}}
             </li>
-            <li ng-show="home.activeProject.demo_link || home.activeProject.github_link">
-              <span class="title">Links:</span> 
+            <li ng-show="home.activeProject.demo_link || home.activeProject.github_link" class="bottom-links">
               <a ng-href="{{home.activeProject.demo_link}}" ng-show="home.activeProject.demo_link">Demo / Project Page</a> <a ng-href="{{home.activeProject.github_link}}" ng-show="home.activeProject.github_link">GitHub Repo</a>
             </li>
           </ul>

@@ -132,7 +132,13 @@ section.projects {
           span {
             display: inline-block;
             position: relative;
+            padding-right: 1rem;
+          }
 
+          a {
+            color: #FFF;
+            font-size: 1.4rem;
+            padding: 0 0.2rem;
           }
         }
 
@@ -172,19 +178,19 @@ section.projects {
         line-height: 1.05em;
         letter-spacing: -1px;
         font-weight: 400;
-        padding: 1.5rem;
+        padding: 1.5rem 2rem 1.5rem 1.5rem;
         text-align: left;
 
         p {
-          margin-bottom: 1rem;
+          text-align: justify;
+          margin-bottom: 1.6rem;
         }
       }
 
       .detail-image {
-        padding-top: 1.5rem;
+        padding: 1.5rem 0;
         img {
           width: 100%;
-          border-radius: 6px;
         }
       }
 
@@ -195,6 +201,10 @@ section.projects {
         color: #FFF;
         text-align: left;
         font-size: 1.2rem;
+
+        ul {
+          padding: 0;
+        }
 
         li {
           margin-bottom: 1rem;
@@ -209,6 +219,21 @@ section.projects {
           .title {
             font-weight: 700;
             color: $lightgreen;
+          }
+        }
+
+        .bottom-links {
+          text-align: center;
+          margin: 0 -1rem -1rem -1rem;
+          padding: 1rem;
+          background: rgba(0,0,0,0.5);
+
+          a {
+            color: $yellow;
+            font-size: 1.4rem;
+            padding: 0 1rem;
+            text-decoration: none;
+            font-weight: 500;
           }
         }
       }
