@@ -271,6 +271,15 @@
 
 
 
+@keyframes stretchOut {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10.5rem;
+  }
+}
+
 .sk-spinner-cube-grid {
   margin: 0 auto; 
   overflow: hidden;

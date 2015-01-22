@@ -23,47 +23,58 @@ paid = Project.new({
   github_link: nil,
   project_type: "Full-time Employment",
   project_length: "6 months",
-  integration: "Twitter API, Instagram API, Stripe",
+  integration: "Twitter, Instagram, Firebase, Stripe",
   overview: '<p>#paid is an influencer marketing platform that lets brands connect and collaborate with social media influencers for sponsored posts. I was hired as lead back-end developer to build the platform from scratch.</p>
   <p>The platform features a bid-based campaign marketplace, a workroom with real-time chat & file transfer, a payment escrow system with Stripe, and detailed social media analytics for the sponsored post.</p>
-  <p>#paid has been featured on TechCrunch and BetaList, and has been used by brands like American Express, Roots, Microsoft, Danier, Toms and Clean & Clear.</p>' 
-  technical_challenges: "#paid became a massive project, with over 30 models, a lot of third-party integration, and a complex stack. Trying to build a stable, scalable platform with so many parts was a massive challenge. I realized a few months in that we were accruing a lot of technical debt, and we started practicing test-driven-development, which greatly increased our confidence in the stability of the platform."
+  <p>#paid has been featured on TechCrunch and BetaList, and has been used by brands like American Express, Roots, Microsoft, Danier, Toms and Clean & Clear.</p>' ,
+  technical_challenges: "#paid became a massive project, with over 30 models, deep third-party integration, and a complex stack. Trying to build a stable, scalable platform with so many parts was a massive challenge. I realized a couple months in that we were accruing a lot of technical debt, and we started practicing test-driven-development, which greatly increased our confidence in the stability of the platform."
 })
 
-paid.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/browse_campaigns.jpg', placement: 0)
-paid.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/browse_celebrities.jpg', placement: 0)
-
+paid.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/detail_paid.jpg', placement: 0)
 projects << paid
+
+
+hb = Project.new({ 
+  display_name:"HungryBelly",
+  thumb_path: "https://s3.amazonaws.com/joshwcc/hungrybelly_thumb.png",
+  colour: "#3498db",
+  stack: "Rails, jQuery",
+  demo_link: "http://www.hungrybelly.me",
+  github_link: "https://github.com/joshwcomeau/HungryBelly",
+  project_type: "Hackathon",
+  project_length: "24 hours",
+  integration: "Ordr.in API",
+  overview: "<p>Built in 24 hours for the 2014 AngelHackTO hackathon, HungryBelly was a mystery food-delivery service designed to cure decision-paralysis. It won 1st place, and my team and I were flown to San Francisco to pitch at AngelHack's Global Demo Day.</p>
+  <p>HungryBelly is an alternative to the food aggregators like Just-Eat that overwhelm with too many options. Enter your budget, number of servings, and optionally the cuisine you feel like. The Rails back-end finds local restaurants with the ordr.in API, builds a randomized meal set within your budget, and places the order, all behind the scenes; the user doesn't know what they've ordered until it shows up at their door.",
+  technical_challenges: "The biggest challenge was the lack of time; aside from a couple power naps, we worked through the 24 hour window and finished literally in the final minutes."
+})
+
+hb.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/detail_hungrybelly.png', placement: 0)
+projects << hb
+
+
+cmatch = Project.new({ 
+  display_name: "ColourMatch",
+  thumb_path: "https://s3.amazonaws.com/joshwcc/colourmatch_thumb.png",
+  colour: "#1e1e20",
+  stack: "Rails, PostgreSQL, Angular.js",
+  demo_link: "http://colourmatch.ca",
+  github_link: "https://github.com/joshwcomeau/ColourMatch",
+  project_type: "Open-source tool",
+  project_length: "2 weeks",
+  integration: "500px API",
+  overview: "<p>ColourMatch is a search-by-colour tool that helps you find stock photography based on your colour palette.</p>
+  <p>Built from scratch with ImageMagick, a linux image processing tool, I experimented with many statistical and mathematical methods to extract the ideal set of colours from an image. In the end, by combining the most common colours with hue/saturation/brightness outliers, I was able to accurately represent most images in a 4-6 colour palette.</p><p>Images sourced from 500px.</p>",
+  technical_challenges: "Similar search-by-colour tools take a purely statistical approach: If you select a specific red, it looks for photos where that colour takes up 90% of the image. I was more interested in finding photos where that red <em>stands out</em> to humans, like the red eyes of an albino cat. The bulk of my energy was spent on trying to solve this problem."
+})
+
+cmatch.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/detail_colourmatch.jpg', placement: 0)
+projects << cmatch
+
 
 
 Project.create([ 
   { 
-    display_name:"HungryBelly",
-    thumb_path: "https://s3.amazonaws.com/joshwcc/hungrybelly_thumb.png",
-    colour: "#3498db",
-    stack: "Rails, jQuery",
-    demo_link: "http://www.hungrybelly.me",
-    github_link: "https://github.com/joshwcomeau/HungryBelly",
-    project_type: "Hackathon",
-    project_length: "24 hours",
-    integration: "Ordr.in API",
-    overview: "<p>Built in 24 hours for the 2014 AngelHackTO hackathon, HungryBelly was a mystery food-delivery service designed to cure decision-paralysis. It won 1st place, and my team and I were flown to San Francisco to pitch at AngelHack's Global Demo Day.</p>
-    <p>HungryBelly is an alternative to the food aggregators like Just-Eat that overwhelm with too many options. Enter your budget, number of servings, and optionally the cuisine you feel like. The Rails back-end finds local restaurants with the ordr.in API, builds a randomized meal set within your budget, and places the order, all behind the scenes; the user doesn't know what they've ordered until it shows up at their door.",
-    technical_challenges: "The biggest challenge was the lack of time; aside from a couple power naps, we worked through the 24 hour window and finished literally in the final minutes."
-  }, { 
-    display_name: "ColourMatch",
-    thumb_path: "https://s3.amazonaws.com/joshwcc/colourmatch_thumb.png",
-    colour: "#1e1e20",
-    stack: "Rails, PostgreSQL, Angular.js",
-    demo_link: "http://colourmatch.ca",
-    github_link: "https://github.com/joshwcomeau/ColourMatch",
-    project_type: "Open-source tool",
-    project_length: "2 weeks",
-    integration: "500px API",
-    overview: "<p>ColourMatch is a search-by-colour tool that helps you find stock photography based on your colour palette.</p>
-    <p>Built from scratch with ImageMagick, a linux image processing tool, I experimented with many statistical and mathematical methods to extract the ideal set of colours from an image. In the end, by combining the most common colours with hue/saturation/brightness outliers, I was able to accurately represent most images in a 4-6 colour palette.</p><p>Images sourced from 500px.</p>",
-    technical_challenges: "Similar search-by-colour tools take a purely statistical approach: If you select a specific red, it looks for photos where that colour takes up 90% of the image. I was more interested in finding photos where that red <em>stands out</em> to humans, like the red eyes of an albino cat. The bulk of my energy was spent on trying to solve this problem."
-  }, { 
     display_name: "CLYWmparison",
     thumb_path: "https://s3.amazonaws.com/joshwcc/clywmparison_thumb.png",
     colour: "#643010",

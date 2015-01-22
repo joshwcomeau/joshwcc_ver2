@@ -91,6 +91,10 @@
         bottom: -0.4rem;
         margin: auto;
         border-bottom: 3px solid $lightgreen;
+        animation-delay: 0.5s;
+        animation-duration: 1.5s !important;  
+        animation-name: stretchOut;
+        animation-fill-mode: both;
       }
     }
     h3 {

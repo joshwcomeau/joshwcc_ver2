@@ -12,31 +12,46 @@
         </div>
         <header ng-style="{'background': home.activeProject.colour}">
           <h3><span>{{home.activeProject.display_name}}</span></h3>
+          <div class="ext-links">
+            <a ng-href="{{home.activeProject.demo_link}}" ng-show="home.activeProject.demo_link"><i class="fa fa-external-link"></i></a> 
+            <a ng-href="{{home.activeProject.github_link}}" ng-show="home.activeProject.github_link"><i class="fa fa-github"></i></a>
+          </div>
         </header>
 
         <div class="grid">
-          <div class="content c8" ng-bind-html="home.parseAsHTML(home.activeProject.content)">
+          <div class="content c7" ng-bind-html="home.parseAsHTML(home.activeProject.overview)">
             <!-- injected Angular content goes here -->
           </div>
 
-          <div class="stats c4">
-            Stack: {{home.activeProject.stack}}
-            Project Type: {{home.activeProject.project_type}}<br>
-            Project Length: {{home.activeProject.project_length}}<br>
+          <div class="detail-image c5">
+            <img src="{{home.activeProject.images[0].src}}">
           </div>
         </div>
-        
+
         
 
-        <div class="project-images">
+        <div class="project-stats">
           <ul>
-            <li ng-repeat="img in home.activeProject.images" class="image-li">
-              <img ng-src="{{img.src}}">    
+            <li>
+              <span class="title">Technical Challenges:</span> {{home.activeProject.technical_challenges}}
+            </li>
+            <li class="half">
+              <span class="title">Project Type:</span> {{home.activeProject.project_type}}
+            </li><li class="half">
+              <span class="title">Project Length:</span> {{home.activeProject.project_length}}
+            </li><li class="half">
+              <span class="title">Third-Party Integrations:</span> {{home.activeProject.integration}}
+            </li><li class="half">
+              <span class="title">Stack:</span> {{home.activeProject.stack}}
+            </li>
+            <li ng-show="home.activeProject.demo_link || home.activeProject.github_link">
+              <span class="title">Links:</span> 
+              <a ng-href="{{home.activeProject.demo_link}}" ng-show="home.activeProject.demo_link">Demo / Project Page</a> <a ng-href="{{home.activeProject.github_link}}" ng-show="home.activeProject.github_link">GitHub Repo</a>
             </li>
           </ul>
         </div>
-
-        
+<!-- 
+ -->        
       </div>
       
     </div>

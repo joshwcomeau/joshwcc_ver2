@@ -86,8 +86,7 @@ section.projects {
     top: 0;
     left: 0.5rem;
     right: 0.5rem;
-    bottom: 0;
-    height: 100%;
+    min-height: 100%;
     padding: 0.5rem;
     background: $lightgrey;
 
@@ -105,7 +104,7 @@ section.projects {
 
     .active-project-container {
       position: relative;
-      background: $lightgrey;
+      background: #FFF;
 
       &.ng-hide-remove.ng-hide-remove-active {
         animation-duration: 0.3s !important;  
@@ -136,13 +135,24 @@ section.projects {
 
           }
         }
+
+        .ext-links {
+          position: absolute;
+          right: 1rem;
+          bottom: 1rem;
+          font-size: 1.2rem;
+
+          a {
+            color: $blue;
+          }
+        }
       }
 
       .close {
         position: absolute;
-        padding: 1rem;
-        right: 1rem;
-        top: 1rem;
+        padding: 1.5rem 1rem;
+        right: 0;
+        top: 0;
         z-index: 2;
         cursor: pointer;
 
@@ -169,49 +179,37 @@ section.projects {
           margin-bottom: 1rem;
         }
       }
-      .project-images {
-        background: #222;
-      }
-      .image-li {
-        display: inline-block;
-        padding: 1rem;
-        width: 50%;
 
+      .detail-image {
+        padding-top: 1.5rem;
         img {
           width: 100%;
+          border-radius: 6px;
         }
-  
-        /* one items */
-        &:first-child {
-          width: 100%;
-        }
-        /* two items */
-        &:first-child:nth-last-child(2),
-        &:first-child:nth-last-child(2) ~ & {
-          width: 50%;
-        }
-        /* three items */
-        &:first-child:nth-last-child(3),
-        &:first-child:nth-last-child(3) ~ & {
-          width: 33.3333%;
-        }
+      }
 
-        /* four items */
-        &:first-child:nth-last-child(4),
-        &:first-child:nth-last-child(4) ~ & {
-          width: 25%;
-        }
 
-        /* five items */
-        &:first-child:nth-last-child(5),
-        &:first-child:nth-last-child(5) ~ & {
-          width: 20%;
-        }
+      .project-stats {
+        background: #444;
+        padding: 1rem;
+        color: #FFF;
+        text-align: left;
+        font-size: 1.2rem;
 
-        /* six items */
-        &:first-child:nth-last-child(6),
-        &:first-child:nth-last-child(6) ~ & {
-          width: 16.6666%;
+        li {
+          margin-bottom: 1rem;
+
+          &.half {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            padding-right: 1rem;
+          }
+
+          .title {
+            font-weight: 700;
+            color: $lightgreen;
+          }
         }
       }
 
