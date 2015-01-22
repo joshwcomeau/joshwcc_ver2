@@ -32,8 +32,16 @@
       <header ng-style="{'background': home.activeProject.colour}">
         <h3><span>{{home.activeProject.display_name}}</span></h3>
       </header>
+      
       <div class="content" ng-bind-html="home.parseAsHTML(home.activeProject.content)">
-        
+      </div>
+
+      <div class="project-images">
+        <ul>
+          <li ng-repeat="img in home.activeProject.images" class="image-li">
+            <img ng-src="/assets/{{img.src}}">    
+          </li>
+        </ul>
       </div>
 
       <div class="stats">
@@ -45,7 +53,8 @@
     
   </div>
   <ul>
-    <li ng-repeat="project in home.projects" 
+    <li class="project-thumb"
+    ng-repeat="project in home.projects" 
     ng-mouseenter="home.focusedProject = project" 
     ng-mouseleave="home.focusedProject = null"
     ng-click="home.activeProject = project"

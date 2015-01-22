@@ -12,22 +12,31 @@ end
 
 Project.destroy_all
 
+projects = []
+
+paid = Project.new({
+  display_name: "#paid",
+  thumb_path: "paid_thumb.png",
+  colour: "#222222",
+  stack: "Rails, PostgreSQL, Angular.js, Firebase",
+  demo_link: "http://www.hashtagpaid.com",
+  github_link: nil,
+  project_type: "Full-time Employment",
+  project_length: "6 months",
+  integration: "Twitter API, Instagram API, Stripe",
+  content: '<p>#paid is an influencer marketing platform that lets brands connect and collaborate with social media influencers for sponsored posts. I was hired as lead back-end developer to build the platform from scratch.</p>
+  <p>The platform features a bid-based campaign marketplace, a workroom with real-time chat & file transfer, a payment escrow system with Stripe, and detailed social media analytics for the sponsored post.</p>
+  <p>#paid has been featured on TechCrunch and BetaList, and has been used by brands like American Express, Roots, Microsoft, Danier, Toms and Clean & Clear.</p>' 
+})
+
+paid.images << Image.new(src: 'browse_campaigns.png', placement: 0)
+paid.images << Image.new(src: 'browse_celebrities.png', placement: 0)
+
+projects << paid
+
 
 Project.create([ 
-  {
-    display_name: "#paid",
-    thumb_path: "paid_thumb.png",
-    colour: "#222222",
-    stack: "Rails, PostgreSQL, Angular.js, Firebase",
-    demo_link: "http://www.hashtagpaid.com",
-    github_link: nil,
-    project_type: "Full-time Employment",
-    project_length: "6 months",
-    integration: "Twitter API, Instagram API, Stripe",
-    content: '<p>#paid is an influencer marketing platform that lets brands connect and collaborate with social media influencers for sponsored posts. I was hired as lead back-end developer to build the platform from scratch.</p>
-    <p>The platform features a bid-based campaign marketplace, a workroom with real-time chat & file transfer, a payment escrow system with Stripe, and detailed social media analytics for the sponsored post.</p>
-    <p>#paid has been featured on TechCrunch and BetaList, and has been used by brands like American Express, Roots, Microsoft, Danier, Toms and Clean & Clear.</p>' 
-  }, { 
+  { 
     display_name:"HungryBelly",
     thumb_path: "hungrybelly_thumb.png",
     colour: "#3498db",
@@ -125,6 +134,9 @@ Project.create([
     <p>Named as one of the top-10 global submissions for our category, and with an honourable mention in sustainability, Earthy proved to be an invaluable learning experience."
   } 
 ].reverse)
+
+
+projects.reverse.each(&:save)
 
 # { 
 #     display_name:  "Portfolio",

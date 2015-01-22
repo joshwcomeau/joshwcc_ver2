@@ -10,7 +10,7 @@ section.projects {
     padding: 0.5rem 0;
   }
 
-  li {
+  .project-thumb {
     position: relative;
     width: 33.333%;
     max-width: 500px;
@@ -94,7 +94,7 @@ section.projects {
       animation-fill-mode: both;
     }
     &.ng-hide-add.ng-hide-add-active {
-      animation-duration: 0.3s !important;  
+      animation-duration: 0.5s !important;  
       animation-name: fadeOut;
       animation-fill-mode: both;
     }
@@ -103,12 +103,11 @@ section.projects {
       position: absolute;
       width: 75%;
       max-width: 1000px;
-      max-height: 80%;
-      top: 10%;
+      max-height: 96%;
+      top: 2%;
       left: 0;
       right: 0;
       margin: auto;
-      padding: 1rem;
       overflow-y: auto;
       background: $lightgrey;
 
@@ -118,9 +117,7 @@ section.projects {
         animation-fill-mode: both;
       }
       &.ng-hide-add.ng-hide-add-active {
-        animation-duration: 0.2s !important;  
-        animation-name: fadeOutDown;
-        animation-fill-mode: both;
+
       }
     
       & > header {
@@ -174,6 +171,51 @@ section.projects {
 
         p {
           margin-bottom: 1rem;
+        }
+      }
+      .project-images {
+        background: #222;
+      }
+      .image-li {
+        display: inline-block;
+        padding: 1rem;
+        width: 50%;
+
+        img {
+          width: 100%;
+        }
+  
+        /* one items */
+        &:first-child {
+          width: 100%;
+        }
+        /* two items */
+        &:first-child:nth-last-child(2),
+        &:first-child:nth-last-child(2) ~ & {
+          width: 50%;
+        }
+        /* three items */
+        &:first-child:nth-last-child(3),
+        &:first-child:nth-last-child(3) ~ & {
+          width: 33.3333%;
+        }
+
+        /* four items */
+        &:first-child:nth-last-child(4),
+        &:first-child:nth-last-child(4) ~ & {
+          width: 25%;
+        }
+
+        /* five items */
+        &:first-child:nth-last-child(5),
+        &:first-child:nth-last-child(5) ~ & {
+          width: 20%;
+        }
+
+        /* six items */
+        &:first-child:nth-last-child(6),
+        &:first-child:nth-last-child(6) ~ & {
+          width: 16.6666%;
         }
       }
 
