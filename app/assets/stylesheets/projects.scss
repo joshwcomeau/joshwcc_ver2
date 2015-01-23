@@ -165,8 +165,8 @@ section.projects {
 
         img {
           opacity: 0.3;
-          width: 15px;
-          height: 15px;
+          width: 30px;
+          height: 30px;
         }
       }
 
@@ -258,6 +258,17 @@ section.projects {
 
 @media screen and (min-width: 700px) {
   section.projects {
+    .active-project {
+      .active-project-container {
+        .close {
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+
     .project-thumb {
       width: 50%;
     }
