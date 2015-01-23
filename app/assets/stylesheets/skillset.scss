@@ -41,11 +41,16 @@ section.skillset {
     margin-bottom: 0.1rem;
     text-shadow: 
       1px 0px 0px lighten($lightgreen, 15%),
-      -1px 0px 0px lighten($lightgreen, 15%),
+      1px 1px 0px lighten($lightgreen, 15%),
       0px 1px 0px lighten($lightgreen, 15%),
+      -1px 0px 0px lighten($lightgreen, 15%),
+      -1px 1px 0px lighten($lightgreen, 15%),
       2px 0px 0px lighten($lightgreen, 15%),
+      2px 2px 0px lighten($lightgreen, 15%),
+      0px 2px 0px lighten($lightgreen, 15%),
       -2px 0px 0px lighten($lightgreen, 15%),
-      0px 2px 0px lighten($lightgreen, 15%);
+      -2px 2px 0px lighten($lightgreen, 15%)
+      ;
   }
 
   .skill-list {
