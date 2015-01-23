@@ -23,7 +23,7 @@ section.skillset {
   }
 
   .intro {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin: 1rem auto;
     line-height: 1.2em;
     letter-spacing: -1px;
@@ -76,6 +76,14 @@ section.skillset {
         padding: 0.6rem 1.45rem;
         transition: 0.2s;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  section.blog {
+    .intro {
+      font-size: 1.8rem;
     }
   }
 }

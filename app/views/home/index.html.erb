@@ -76,7 +76,7 @@
 
 
 
-  <section class="skillset">
+  <section class="skillset" ng-if="!home.activeProject">
     <div class="width-wrapper">
       <p class="intro">On the front-end to back-end spectrum, I fall somewhere in the middle. I'm passionate about architecting applications from the bottom up, writing well-structured, modular code, handling complex business logic, and finding clever ways to improve performance.</p> 
       <p class="intro">Here are some of the languages, frameworks, tools and methodologies I feel comfortable with. </p>
@@ -107,7 +107,7 @@
     </div>
   </section>
 
-  <section class="blog">
+  <section class="blog" ng-if="!home.activeProject">
     <div class="width-wrapper">
       <p class="intro">I like writing about my coding experiences. Here are some recent ramblings.</p> 
 
@@ -128,7 +128,7 @@
     </div>    
   </section>
 
-  <section class="contact">
+  <section class="contact" ng-if="!home.activeProject">
     <div class="width-wrapper">
       <h2 class="title">Let's talk!</h2>
       <p class="intro">I'm friendly and all over the internet. Pick your poison:</p>  
@@ -160,7 +160,7 @@
   </section>
 
 
-  <footer class="main-footer">
+  <footer class="main-footer" ng-if="!home.activeProject">
     This portfolio was built by <strong>Joshua Comeau</strong>. Copyright right now. All rights, wrongs, and grey areas reserved. 
   </footer>
 </div>
