@@ -16,7 +16,7 @@ function navHighlight($window) {
         sections    = createSectionArray(attrs.sections);
 
         return _.find(sections, function(section) {
-          if ( windowTop >= section.height ) {
+          if ( windowTop >= section.offset ) {
             // We've found our active section!
             return section.name;
           }
@@ -35,7 +35,7 @@ function navHighlight($window) {
         return _.map(sections.split(",").reverse(), function(section) {
           return { 
             name:   section, 
-            height: $("."+section).offset().top - navHeight
+            offset: $("."+section).offset().top - navHeight - 16
           }
         });
       }      
