@@ -18,6 +18,11 @@ $nav-height: 4rem;
     transition: 1s;
   }
 
+  &.no-shadow {
+    box-shadow: 0px 1rem 0px $blue;
+    transition: 0.5s;
+  }
+
   &.fixed-from-top {
     position: fixed;
     width: 100%;

@@ -13,8 +13,8 @@
         <header ng-style="{'background': home.activeProject.colour}">
           <h3>
             <span>{{home.activeProject.display_name}}</span>
-            <a ng-href="{{home.activeProject.demo_link}}" ng-show="home.activeProject.demo_link"><i class="fa fa-external-link"></i></a> 
-            <a ng-href="{{home.activeProject.github_link}}" ng-show="home.activeProject.github_link"><i class="fa fa-github"></i></a>
+            <a ng-href="{{home.activeProject.demo_link}}" ng-show="home.activeProject.demo_link" target="_blank"><i class="fa fa-external-link"></i></a> 
+            <a ng-href="{{home.activeProject.github_link}}" ng-show="home.activeProject.github_link" target="_blank"><i class="fa fa-github"></i></a>
           </h3>
             
         </header>
@@ -25,14 +25,16 @@
           </div>
 
           <div class="detail-image">
-            <img src="{{home.activeProject.images[0].src}}">
+            <a ng-href="{{home.activeProject.demo_link || home.activeProject.github_link}}" target="_blank">
+              <img ng-src="{{home.activeProject.images[0].src}}">
+            </a>
           </div>
         </div>
 
         
 
         <div class="project-stats">
-          <ul>
+          <ul class="stat-ul">
             <li>
               <span class="title">Technical Challenges:</span> {{home.activeProject.technical_challenges}}
             </li>
@@ -45,6 +47,8 @@
             </li><li class="half" ng-show="home.activeProject.stack">
               <span class="title">Stack:</span> {{home.activeProject.stack}}
             </li>
+          </ul>
+          <ul>
             <li ng-show="home.activeProject.demo_link || home.activeProject.github_link" class="bottom-links">
               <a ng-href="{{home.activeProject.demo_link}}" ng-show="home.activeProject.demo_link">Project Page</a> <a ng-href="{{home.activeProject.github_link}}" ng-show="home.activeProject.github_link">GitHub Repo</a>
             </li>
@@ -141,5 +145,39 @@
     </div>    
   </section>
 
-  <section class="contact"></section>
+  <section class="contact">
+    <div class="width-wrapper">
+      <h2 class="title">Let's talk!</h2>
+      <p class="intro">I'm friendly and all over the internet. Pick your poison:</p>  
+    
+    
+      <div class="contacts">
+        <ul>
+          <li>
+            <a href="mailto:joshwcomeau@gmail.com"><span class="icon"><i class="fa fa-envelope"></i></span>joshwcomeau@gmail.com</a>
+          </li>
+          <li>
+            <a href="https://github.com/joshwcomeau"><span class="icon"><i class="fa fa-github"></i></span>joshwcomeau</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/profile/view?id=340630788"><span class="icon"><i class="fa fa-linkedin-square"></i></span>Joshua Comeau</a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/joshuawcomeau"><span class="icon"><i class="fa fa-twitter"></i></span>@joshuawcomeau</a>
+          </li>        
+          <li>
+            <a href="https://www.facebook.com/joshwcomeau"><span class="icon"><i class="fa fa-facebook-square"></i></span>joshwcomeau</a>
+          </li>
+          <li>
+            <a href="https://medium.com/@joshuawcomeau"><span class="icon"><i class="fa fa-medium"></i></span>@joshuawcomeau</a>
+          </li>
+        </ul> 
+      </div>
+    </div>
+  </section>
+
+  
+  <footer class="main-footer">
+    This portfolio was built by <strong>Joshua Comeau</strong>. Copyright right now. All rights, wrongs, and grey areas reserved. 
+  </footer>
 </div>

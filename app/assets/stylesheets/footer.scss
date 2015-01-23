@@ -1,0 +1,14 @@
+@import 'variables';
+
+footer.main-footer {
+  background: #222;
+  color: #FFF;
+  padding: 4rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+
+  strong {
+    color: $lightgreen;
+    font-weight: 700;
+  }
+}

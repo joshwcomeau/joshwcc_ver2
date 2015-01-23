@@ -204,12 +204,16 @@ section.projects {
         text-align: left;
         font-size: 1.2rem;
 
+        .stat-ul {
+          padding: 1rem 0;
+        }
+
         ul {
           padding: 0;
         }
 
         li {
-          margin-bottom: 1rem;
+          margin-bottom: 1.5rem;
 
           &.half {
             width: 50%;

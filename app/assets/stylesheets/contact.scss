@@ -1,0 +1,82 @@
+@import 'variables';
+
+section.contact {
+  background: $darkgrey;
+  min-height: 600px;
+
+  .width-wrapper {
+    max-width: 830px;
+    padding: 2rem 0 6rem 0;
+  }
+
+  .title {
+    position: relative;
+    color: $lightblue;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -3px;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      z-index: 0;
+      width: 20%;
+      left: 40%;
+      bottom: -0.5rem;
+      margin: auto;
+      border-bottom: 3px solid $lightgreen;
+    }
+  }
+
+  .intro {
+    font-size: 2rem;
+    color: #FFF;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .contacts {
+    max-width: 500px;
+    margin: 0 auto;
+    color: #FFF;
+    font-size: 2.2rem;
+
+    .icon {
+      display: inline-block;
+      width: 2.5rem;
+      text-align: center;
+      margin-right: 1.5rem;
+    }
+    li {
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+      a {
+        display: block;
+        padding: 1rem;
+        color: $blue;
+        text-decoration: none;
+        font-weight: 400;
+        transition: 0.5s;
+
+
+        i {
+          color: #DDD;
+        }
+
+        &:hover {
+          background: rgba(255,255,255,0.2);
+          transition: 0.2s;
+
+          i {
+            color: #FFF;
+          }
+          
+        }
+      }
+    }
+  }
+}
