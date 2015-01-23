@@ -131,9 +131,9 @@
 
       <div class="card-holder" ng-repeat="post in home.blogPosts">
         <div class="card">
-          <a ng-href="{{post.link}}"><img ng-src="{{post.img}}"></a>
+          <a ng-href="{{post.link}}" target="_blank"><img ng-src="{{post.img}}"></a>
           <div class="description">
-            <h3 class="title"><a ng-href="{{post.link}}">{{post.title}}</a></h3>
+            <h3 class="title"><a ng-href="{{post.link}}" target="_blank">{{post.title}}</a></h3>
             <p>{{post.desc}}</p>
             <footer>
               <h5 class="author">Joshua Comeau</h5>
@@ -176,7 +176,7 @@
     </div>
   </section>
 
-  
+
   <footer class="main-footer">
     This portfolio was built by <strong>Joshua Comeau</strong>. Copyright right now. All rights, wrongs, and grey areas reserved. 
   </footer>
