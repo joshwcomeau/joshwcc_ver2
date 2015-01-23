@@ -7,6 +7,24 @@
   text-align: center;
   padding-bottom: 2rem;
 
+  .social-media {
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    right: 3rem;
+    font-size: 1.5rem;
+
+    a {
+      color: #FFF;
+      opacity: 0.65;
+      padding: 0.5rem;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
   .my-face {
     position: absolute;
     z-index: 1;
