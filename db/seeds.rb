@@ -131,7 +131,7 @@ marsrover = Project.new({
   thumb_path: "https://s3.amazonaws.com/joshwcc/marsrover_thumb.png",
   colour: "#3d7a00",
   stack: "Sinatra, CSS3",
-  demo_link: nil,
+  demo_link: "https://marsrover.herokuapp.com",
   github_link: "https://github.com/joshwcomeau/Mars-Rover-HTML",
   project_type: "Just for fun",
   project_length: "48 hours",
