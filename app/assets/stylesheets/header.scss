@@ -15,12 +15,26 @@
     font-size: 1.5rem;
 
     a {
+      position: relative;
       color: #FFF;
       opacity: 0.65;
       padding: 0.5rem;
+      animation-duration: 1.5s !important;  
+      animation-name: fadeInDropMod;
+      animation-fill-mode: backwards;
 
       &:hover {
-        opacity: 1;
+        opacity: 1 !important;
+      }
+
+      &.icon1 {
+        animation-delay: 0.5s;
+      }
+      &.icon2 {
+        animation-delay: 1s;
+      }
+      &.icon3 {
+        animation-delay: 1.5s;
       }
     }
   }
@@ -63,27 +77,6 @@
       opacity: 0;
     }
 
-    &:hover {
-      width: 34rem;
-      height: 34rem;
-      top: -9rem;
-      transition: 0.4s;
-      border-bottom: 0;
-
-      img {
-        top: 0;
-        left: 0;
-        transition: 0.4s;
-      }
-
-      .text-helper {
-        bottom: 0;
-        transition: 0.3s;
-        opacity: 0.9;
-      }
-    }
-
-
   }
   .my-face-spacer {
     position: relative;
@@ -94,7 +87,7 @@
     position: relative;
     z-index: 2;
     padding-top: 1rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 0.5rem;
 
     h1 {
       color: $yellow;
@@ -121,9 +114,60 @@
       color: $lightblue;
     }
     h5 {
-      padding-top: 1rem;
+      padding: 2rem 1rem;
       color: $lightgrey;
+    }
+
+    .mobile {
+      display: block; 
+
+      span {
+        display: block;
+      }
+    }
+    .non-mobile {
+      display: none;
     }
   }
 
 }
+@media screen and (min-width: 600px) {
+  .main-header {
+    .my-face {
+      &:hover {
+        width: 34rem;
+        height: 34rem;
+        top: -9rem;
+        transition: 0.4s;
+        border-bottom: 0;
+
+        img {
+          top: 0;
+          left: 0;
+          transition: 0.4s;
+        }
+
+        .text-helper {
+          bottom: 0;
+          transition: 0.3s;
+          opacity: 0.9;
+        }
+      }
+    }
+    .headings {
+      .mobile {
+        display: none; 
+      }
+      .non-mobile {
+        display: block;
+      }      
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+}
+
+@media screen and (min-width: 1000px) {
+}
+

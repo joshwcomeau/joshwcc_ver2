@@ -22,8 +22,14 @@ section.blog {
   .card-holder {
     display: inline-block;
     vertical-align: top;
-    width: 25%;
+    width: 100%;
     padding: 0.5rem;
+
+    a {
+      display: block;
+      color: #000;
+      text-decoration: none;
+    }
 
     .card {
       position: relative;
@@ -72,8 +78,7 @@ section.blog {
         a {
           position: relative;
           z-index: 2;
-          color: #000;
-          text-decoration: none;
+
 
           &:before {
             content: " ";
@@ -110,4 +115,28 @@ section.blog {
     }
   }
 
+}
+
+@media screen and (min-width: 550px) {
+  section.blog {
+    .card-holder {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  section.blog {
+    .card-holder {
+      width: 33.333%;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  section.blog {
+    .card-holder {
+      width: 25%;
+    }
+  }
 }

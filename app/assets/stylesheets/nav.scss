@@ -8,7 +8,7 @@ $nav-height: 4rem;
   height: $nav-height;
   line-height: $nav-height;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: #FFF;
   font-weight: 500;
   box-shadow: 0px 1rem 0px $lightgrey;
@@ -32,7 +32,7 @@ $nav-height: 4rem;
   li {
     position: relative;
     display: inline-block;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     margin: 0 0.25rem;
     height: $nav-height;
     cursor: pointer;
@@ -69,5 +69,15 @@ $nav-height: 4rem;
       animation-fill-mode: none;
     }
 
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .main-nav {
+    font-size: 1.5rem;
+
+    li {
+      padding: 0 1rem;
+    }
   }
 }

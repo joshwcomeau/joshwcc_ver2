@@ -85,40 +85,22 @@
       <div class="width-wrapper">
         <h4 class="skill-group-heading">Languages</h4>
         <ul class="skill-list">
-          <li>Ruby</li>
-          <li>Javascript</li>
-          <li>Python</li>
-          <li>PHP</li>
-          <li>SQL</li>
-          <li>HTML5 / CSS3</li>
+          <li>Ruby</li><li>Javascript</li><li>Python</li><li>PHP</li><li>SQL</li><li>HTML5 / CSS3</li>
         </ul>
 
         <h4 class="skill-group-heading">Libraries / Frameworks</h4>
         <ul class="skill-list">
-          <li>Ruby on Rails</li>
-          <li>Angular.js</li>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>jQuery</li>
-          <li>D3.js</li>
-          <li>Sinatra</li>
-          <li>Meteor</li>
+          <li>Ruby on Rails</li><li>Angular.js</li><li>Node.js</li><li>Express</li><li>jQuery</li><li>D3.js</li><li>Sinatra</li><li>Meteor</li>
         </ul>
 
         <h4 class="skill-group-heading">Testing Tools</h4>
         <ul class="skill-list">
-          <li>RSpec</li>
-          <li>Jasmine</li>
-          <li>Mocha / Chai</li>
-          <li>Protractor</li>
-          <li>Capybara</li>
+          <li>RSpec</li><li>Jasmine</li><li>Mocha / Chai</li><li>Protractor</li><li>Capybara</li>
         </ul>
 
         <h4 class="skill-group-heading">Other Skills</h4>
         <ul class="skill-list">
-          <li>Agile / Scrum</li>
-          <li>Server Administration</li>
-          <li>Linux / Mac CLI</li>
+          <li>Agile / Scrum</li><li>Server Administration</li><li>Linux / Mac CLI</li>
         </ul>
    
       </div>
@@ -130,17 +112,18 @@
       <p class="intro">I like writing about my coding experiences. Here are some recent ramblings.</p> 
 
       <div class="card-holder" ng-repeat="post in home.blogPosts">
-        <div class="card">
-          <a ng-href="{{post.link}}" target="_blank"><img ng-src="{{post.img}}"></a>
-          <div class="description">
-            <h3 class="title"><a ng-href="{{post.link}}" target="_blank">{{post.title}}</a></h3>
-            <p>{{post.desc}}</p>
-            <footer>
-              <h5 class="author">Joshua Comeau</h5>
-              <h6 class="date">{{post.date}}</h6>
-            </footer>
+        <a ng-href="{{post.link}}" target="_blank">
+          <div class="card">
+            <img ng-src="{{post.img}}">
+            <div class="description">
+              <h3 class="title">{{post.title}}</h3>
+              <p>{{post.desc}}</p>
+              <footer>
+                <h6 class="date">{{post.date}}</h6>
+              </footer>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>    
   </section>
