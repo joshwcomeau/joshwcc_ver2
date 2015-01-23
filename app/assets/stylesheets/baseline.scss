@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background: $blue;
+  color: #FFF;
+}
+*::-moz-selection {
+  background: $blue;
+  color: #FFF;
+}
+
 html { 
   width:        100%;
   height:       100%; 
