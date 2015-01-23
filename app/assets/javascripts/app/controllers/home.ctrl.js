@@ -2,7 +2,7 @@ function HomeController($scope, $attrs, $sce) {
   var home = this;
   this.projects = gon.projects;
 
-  // If Medium ever releases an API I can automate this =(
+  // Replace me with RSS feed when I don't want to curate the results so badly.
   this.blogPosts = [
   {
     img:    'https://s3.amazonaws.com/joshwcc/blog_letsplaymean.jpg',

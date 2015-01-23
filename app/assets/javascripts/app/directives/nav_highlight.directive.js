@@ -6,7 +6,7 @@ function navHighlight($window) {
           sections, windowTop, activeSection;
 
       $($window).on("scroll resize", function() {
-        if ( !scope.home.freezeActive ) 
+        if ( !scope.home.freezeActive && !scope.home.activeProject ) 
           _.debounce(setActive, 250)();
       });
 

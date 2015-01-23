@@ -3,13 +3,10 @@ function closeProject() {
     restrict: 'A',
     link: function(scope, element, attrs) {
       element.click(function() {
-        // Remove the height.
-        $("section.projects").removeAttr("style");
         scope.$apply(function() {
           scope.home.activeProject = null;  
-        })
-        
-        
+          scope.home.freezeActive = null;
+        });
       })
     }
   };
