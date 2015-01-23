@@ -7,7 +7,7 @@ function clickTo($timeout) {
 
       element.click(function() {
         newOffset = $("."+attrs.dest).offset().top;
-        $("html, body").animate({ scrollTop: newOffset - navHeight }, 500);
+        $("html, body").animate({ scrollTop: newOffset - navHeight +2}, 500);
 
         // Add a temporary animation to the clicked element, after removing it from others
         $(".main-nav-li").removeClass("clicked");
@@ -20,7 +20,7 @@ function clickTo($timeout) {
           
           $timeout(function() {
             scope.home.freezeActive = false;
-          }, 1200);
+          }, 1600);
         })
         
 
