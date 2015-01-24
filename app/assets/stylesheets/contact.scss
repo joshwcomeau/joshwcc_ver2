@@ -43,9 +43,6 @@ section.contact {
     font-size: 1.3rem;
 
     .icon {
-      display: inline-block;
-      width: 2.5rem;
-      text-align: center;
       margin-right: 1.5rem;
     }
 
@@ -75,6 +72,12 @@ section.contact {
 
           i {
             color: #FFF;
+            text-shadow: 
+              0.5px 0.5px 0px lighten($darkgrey, 5%),
+              1px 1px 0px lighten($darkgrey, 5%),
+              1.5px 1.5px 0px lighten($darkgrey, 5%),
+              2px 2px 0px lighten($darkgrey, 5%)
+            ;
           }
           
         }

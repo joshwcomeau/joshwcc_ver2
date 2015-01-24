@@ -4,11 +4,17 @@
   <title>Joshua Comeau - Web Developer &amp; Software Engineer</title>
   <%= include_gon %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="shortcut icon" href="/favicon.ico?v=1" />
+  
   <%= javascript_include_tag 'application' %>
+
+  <!-- Custom font kit -->
   <script src="//use.typekit.net/arn4dpn.js"></script>
+
+  <!-- Custom icon kit -->
+  <script src="//use.fonticons.com/de74e22c.js"></script> 
   <script>try{Typekit.load();}catch(e){}</script>
+  
   <%= csrf_meta_tags %>
 </head>
 <body ng-controller="HomeController as home">
