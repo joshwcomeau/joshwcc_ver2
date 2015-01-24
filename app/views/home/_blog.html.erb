@@ -1,0 +1,20 @@
+<section class="blog" ng-show="!home.activeProject">
+  <div class="width-wrapper">
+    <p class="intro">I like writing about my coding experiences. Here are some recent ramblings.</p> 
+
+    <div class="card-holder" ng-repeat="post in home.blogPosts">
+      <a ng-href="{{post.link}}" target="_blank">
+        <div class="card">
+          <img ng-src="{{post.img}}">
+          <div class="description">
+            <h3 class="title">{{post.title}}</h3>
+            <p>{{post.desc}}</p>
+            <footer>
+              <h6 class="date">{{post.date}}</h6>
+            </footer>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>    
+</section>
