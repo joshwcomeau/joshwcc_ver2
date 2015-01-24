@@ -58,8 +58,8 @@
     ng-repeat="project in home.projects" 
     ng-mouseenter="home.focusedProject = project" 
     ng-mouseleave="home.focusedProject = null"
-    ng-click="home.activeProject = project"
     view-project
+    project="{{project.id}}"
     >
       <div class="project-label" ng-show="home.focusedProject === project">{{project.display_name}}</div>
       <div class="backdrop" ng-show="home.focusedProject === project"></div>

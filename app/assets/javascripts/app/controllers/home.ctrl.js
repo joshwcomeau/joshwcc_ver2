@@ -32,7 +32,21 @@ function HomeController($scope, $attrs, $sce) {
 
   this.parseAsHTML = function(string) {
     return $sce.trustAsHtml(string);
-  }
+  };
+
+  this.findProject = function(project_id) {
+    return $.grep(home.projects, function(p) { 
+      return p.id == project_id;
+    });
+  };
+
+  window.onpopstate = function(event) {
+    // Either we want to close the open activeProject, or re-open the last one.
+    if ( home.activeProject )
+      $scope.$apply(function() { home.activeProject = null; });
+    else
+      $scope.$apply(function() { home.activeProject = event.state.project; });
+  };
 
 
 }

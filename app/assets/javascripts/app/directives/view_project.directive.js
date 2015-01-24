@@ -1,8 +1,9 @@
-function viewProject(Project) {
+function viewProject() {
   return {
     restrict: 'A',
     link: function(scope, element, attrs) {
       var navHeight,
+          project,
           projectOffset;
 
       element.click(function() {
@@ -12,17 +13,15 @@ function viewProject(Project) {
         // Scroll to the top of projects
         $("html, body").animate({ scrollTop: (projectOffset - navHeight) }, 250);
 
-        // Set the project height equal to the child height.
-        // setTimeout(function() {
-        //   $("section.projects").height( $(".active-project").height() );
-        // }, 250);
-
-        
-        
-      })
+        // Get our new active project data
+        scope.$apply(function() {
+          project = scope.home.findProject(attrs.project)[0];
+          scope.home.activeProject = project;
+          history.pushState({project: project}, "project");       
+        });  
+      });
     }
   };
 }
 
-viewProject.$inject = ['Project'];
-angular.module('joshwcc').directive('viewProject', ['Project', viewProject]);
+angular.module('joshwcc').directive('viewProject', [viewProject]);
