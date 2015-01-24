@@ -19,7 +19,7 @@
       color: #FFF;
       opacity: 0.65;
       padding: 0.5rem;
-      animation-duration: 1.5s !important;  
+      animation-duration: 1s !important;  
       animation-name: fadeInDropMod;
       animation-fill-mode: backwards;
 
@@ -28,13 +28,13 @@
       }
 
       &.icon1 {
-        animation-delay: 0.5s;
+        animation-delay: 0s;
       }
       &.icon2 {
-        animation-delay: 1s;
+        animation-delay: 0.4s;
       }
       &.icon3 {
-        animation-delay: 1.5s;
+        animation-delay: 0.8s;
       }
     }
   }

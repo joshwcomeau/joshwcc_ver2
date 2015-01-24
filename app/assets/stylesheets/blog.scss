@@ -35,24 +35,14 @@ section.blog {
       position: relative;
       background: #EEE;
       transition: 0.5s;
+      border-bottom: 6px solid $blue;
       top: 0;
 
       &:hover {
         top: -6px;
         background: #FFF;
-        box-shadow: 
-          0px 0.5px 0px darken($blue, 10%),
-          0px 1px 0px darken($blue, 10%),
-          0px 1.5px 0px darken($blue, 10%),
-          0px 2px 0px darken($blue, 10%),
-          0px 2.5px 0px darken($blue, 10%),
-          0px 3px 0px darken($blue, 10%),
-          0px 4.5px 0px darken($blue, 10%),
-          0px 5px 0px darken($blue, 10%),
-          0px 5.5px 0px darken($blue, 10%),
-          0px 6px 0px darken($blue, 10%)
-        ;
-        
+        border-bottom: 6px solid darken($blue, 10%);
+        border-radius: 0 0 6px 6px;
         transition: 0.25s;
 
         img {
