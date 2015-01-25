@@ -6,10 +6,13 @@ function modal() {
         // Click outside to close
         console.log(e.target.className)
         if ( e.target.className.split(" ")[0] == 'modal' ) {
+          projectOffset = $(".projects").offset().top;
+          navHeight = $(".main-nav").height()
+          
           scope.$apply(function() {
             scope.home.activeProject = null;
             scope.home.freezeActive  = null;
-            // $("section.projects").removeAttr("style");
+            $("html, body").animate({ scrollTop: (projectOffset - navHeight) }, 250);
           });
         }
       });
