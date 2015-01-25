@@ -30,7 +30,7 @@
       <div class="project-stats">
         <ul class="stat-ul">
           <li>
-            <span class="title">Technical Challenges:</span> {{home.activeProject.technical_challenges}}
+            <span class="title">Technical Challenges:</span> <span ng-bind-html="home.parseAsHTML(home.activeProject.technical_challenges)"></span>
           </li>
           <li class="half">
             <span class="title">Project Type:</span> {{home.activeProject.project_type}}
