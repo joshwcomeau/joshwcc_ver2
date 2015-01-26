@@ -6,7 +6,33 @@
   background: $blue;
   text-align: center;
   padding-bottom: 2rem;
+  
+  .yellow-gradient {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 15rem;
+    background: -moz-linear-gradient(top,  rgba(247,233,103,0.6) 0%, rgba(247,233,103,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(247,233,103,0.6)), color-stop(100%,rgba(247,233,103,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(247,233,103,0.6) 0%,rgba(247,233,103,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(247,233,103,0.6) 0%,rgba(247,233,103,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(247,233,103,0.6) 0%,rgba(247,233,103,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(247,233,103,0.6) 0%,rgba(247,233,103,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7e967', endColorstr='#00f7e967',GradientType=0 ); /* IE6-9 */
 
+    &.ng-hide-remove.ng-hide-remove-active {
+      animation-duration: 2.5s !important;  
+      animation-name: fadeInDown;
+      animation-fill-mode: both;
+    }
+    &.ng-hide-add.ng-hide-add-active {
+      animation-duration: 1s !important;  
+      animation-name: fadeOutUp;
+      animation-fill-mode: both;
+    }
+  }
   .social-media {
     position: absolute;
     z-index: 1;
@@ -22,6 +48,7 @@
       animation-duration: 1s !important;  
       animation-name: fadeInDropMod;
       animation-fill-mode: backwards;
+      text-shadow: 1px 1px 0px $blue;
 
       &:hover {
         opacity: 1 !important;
