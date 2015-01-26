@@ -9,13 +9,13 @@
 .lightgrey      { color: $lightgrey; }
 .darkgrey       { color: $darkgrey; }
 
-.bg-blue        { background-color: $blue; }
-.bg-lightblue   { background-color: $lightblue; }
-.bg-yellow      { background-color: $yellow; }
-.bg-lightgreen  { background-color: $lightgreen; }
-.bg-green       { background-color: $green; }
-.bg-lightgrey   { background-color: $lightgrey; }
-.bg-darkgrey    { background-color: $darkgrey; }
+.bg-blue        { background-color: $blue       !important; }
+.bg-lightblue   { background-color: $lightblue  !important; }
+.bg-yellow      { background-color: $yellow     !important; }
+.bg-lightgreen  { background-color: $lightgreen !important; }
+.bg-green       { background-color: $green      !important; }
+.bg-lightgrey   { background-color: $lightgrey  !important; }
+.bg-darkgrey    { background-color: $darkgrey   !important; }
 
 
 // Positioning stuffs
@@ -36,6 +36,13 @@
 
 .smaller        { font-size: 0.8em !important; }
 .bigger         { font-size: 1.2em !important; }
+
+// Transitions
+.t-vquick       { transition: 0.2s; }
+.t-quick        { transition: 0.4s; }
+.t-norm         { transition: 0.6s; }
+.t-slow         { transition: 0.9s; }
+.t-vslow        { transition: 1.5s; }
 
 
 // Misc stuffs
