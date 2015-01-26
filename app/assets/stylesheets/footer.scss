@@ -11,4 +11,34 @@ footer.main-footer {
     color: $lightgreen;
     font-weight: 700;
   }
+
+  .line {
+    display: block;
+
+    &.line-1 {
+      margin-bottom: 0.4rem;
+    }
+
+    &.line-2 {
+      font-size: 0.8rem;
+    }    
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+  footer.main-footer {
+    .line {
+      display: inline;
+
+      &.line-1 {
+        margin-bottom: auto;
+      }
+
+      &.line-2 {
+        font-size: inherit;
+      }
+
+    }
+  }
 }
