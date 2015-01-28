@@ -8,7 +8,7 @@ function HomeController($scope, $attrs, $sce) {
     img:    'https://s3.amazonaws.com/joshwcc/blog_letsplaymean.jpg',
     title:  'Let\'s Play MEAN',
     desc:   'A multi-part look at the MEAN stack, from initial setup to deployment.',
-    date:   'Dec 29th 2014',
+    date:   'Jan 28th 2014',
     link:   'https://medium.com/@joshuawcomeau/feelin-mean-8bd942df37d3'
   }, {
     img:    'https://s3.amazonaws.com/joshwcc/blog_buildingpromises.jpg',
