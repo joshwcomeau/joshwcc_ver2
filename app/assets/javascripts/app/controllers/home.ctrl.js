@@ -5,10 +5,16 @@ function HomeController($scope, $attrs, $sce) {
   // Replace me with RSS feed when I don't want to curate the results so badly.
   this.blogPosts = [
   {
+    img:    'https://s3.amazonaws.com/joshwcc/blog_cat.jpg',
+    title:  'Search-by-Colour',
+    desc:   'Building an algorithm that sees colour as we do. A look at how I built ColourMatch.',
+    date:   'Jan 28th 2015',
+    link:   'https://medium.com/@joshuawcomeau/search-by-colour-cb1ba49aa9aa'
+  }, {
     img:    'https://s3.amazonaws.com/joshwcc/blog_letsplaymean.jpg',
     title:  'Let\'s Play MEAN',
     desc:   'A multi-part look at the MEAN stack, from initial setup to deployment.',
-    date:   'Jan 28th 2014',
+    date:   'Dec 6th 2014 - Jan 28th 2015',
     link:   'https://medium.com/@joshuawcomeau/feelin-mean-8bd942df37d3'
   }, {
     img:    'https://s3.amazonaws.com/joshwcc/blog_buildingpromises.jpg',
@@ -22,12 +28,6 @@ function HomeController($scope, $attrs, $sce) {
     desc:   'Some ruminations on my first full-time job as a junior back-end developer.',
     date:   'Nov 10th 2014',
     link:   'https://medium.com/@joshuawcomeau/my-first-developer-gig-1c2b6bce3f6d?recommendNoteId=d7ee9e9f89f3'
-  }, {
-    img:    'https://s3.amazonaws.com/joshwcc/blog_hungrybelly.jpg',
-    title:  'Introducing HungryBelly',
-    desc:   'A recap of my experiences, building the winning AngelHackTO app, HungryBelly',
-    date:   'Jun 29th 2014',
-    link:   'https://medium.com/bitmaker-labs/selfish-design-6eca3f247a91'
   }];
 
   this.parseAsHTML = function(string) {
