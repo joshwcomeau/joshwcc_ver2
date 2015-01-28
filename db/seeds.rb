@@ -6,10 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-def normalize_name(name)
-  name.downcase.gsub(/[^\w]/i, '')
-end
-
 Project.destroy_all
 
 projects = []

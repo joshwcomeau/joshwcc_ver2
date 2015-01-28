@@ -25,12 +25,12 @@
     &.ng-hide-remove.ng-hide-remove-active {
       animation-duration: 2.5s !important;  
       animation-name: fadeInDown;
-      animation-fill-mode: both;
+      animation-fill-mode: forward;
     }
     &.ng-hide-add.ng-hide-add-active {
       animation-duration: 1s !important;  
       animation-name: fadeOutUp;
-      animation-fill-mode: both;
+      animation-fill-mode: none;
     }
   }
   .social-media {
