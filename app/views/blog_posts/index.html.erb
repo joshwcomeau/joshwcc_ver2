@@ -1,0 +1,5 @@
+<% @posts.each do |p| %>
+  <h2><%= p.title %></h2>
+  <h6><%= pluralize p.min_read, 'minute' %> to read.</h6>
+  <p><%= p.content %></p>
+<% end %>

@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   resources :projects, only: :show
 
-  get 'blog', to: 'blogposts#index'
+  get 'blog', controller: 'blog_posts', action: 'index'
 end
