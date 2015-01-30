@@ -11,18 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150122150004) do
+ActiveRecord::Schema.define(version: 20150126190350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "blog_posts", force: true do |t|
+    t.text     "content"
+    t.text     "abstract"
+    t.string   "title"
+    t.string   "author"
+    t.integer  "min_read"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
   create_table "images", force: true do |t|
-    t.integer  "project_id"
     t.string   "src"
     t.integer  "placement"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
   end
+
+  add_index "images", ["imageable_id"], name: "index_images_on_imageable_id", using: :btree
 
   create_table "projects", force: true do |t|
     t.string   "display_name"
@@ -39,5 +53,18 @@ ActiveRecord::Schema.define(version: 20150122150004) do
     t.string   "integration"
     t.text     "technical_challenges"
   end
+
+  create_table "users", force: true do |t|
+    t.string   "email",                        null: false
+    t.string   "crypted_password",             null: false
+    t.string   "salt",                         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "remember_me_token"
+    t.datetime "remember_me_token_expires_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["remember_me_token"], name: "index_users_on_remember_me_token", using: :btree
 
 end

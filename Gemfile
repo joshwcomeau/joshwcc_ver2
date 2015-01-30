@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.1.3'
 
 # Default Rails gems
 gem 'rails', '4.1.2'
@@ -20,6 +19,7 @@ gem 'gon'                           # Pass data from Rails to JS in a nice, tidy
 gem 'quiet_assets'                  # Hides asset stuff from the console.
 gem 'rails_12factor'                # Heroku wants this.
 gem 'shortcode'                     # Wordpress-style shortcodes
+gem 'sorcery'                       # Simple user authentication.
 gem 'unicorn'                       # better app server.
 
 group :development, :test do 

@@ -1,3 +1,3 @@
 class Image < ActiveRecord::Base
-  belongs_to :project
+  belongs_to :imageable, polymorphic: true
 end
