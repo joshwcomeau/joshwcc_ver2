@@ -1,9 +1,8 @@
-ActiveRecord::Base.connection.tables.each { |t| ActiveRecord::Base.connection.reset_pk_sequence!(t) }
-
 BlogPost.destroy_all
 Project.destroy_all
 User.destroy_all
 
+ActiveRecord::Base.connection.tables.each { |t| ActiveRecord::Base.connection.reset_pk_sequence!(t) }
 
 @josh = User.create({
   email: 'joshwcomeau@gmail.com',

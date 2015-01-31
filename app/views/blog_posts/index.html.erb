@@ -1,18 +1,21 @@
 <div class="blog-index-wrapper">
   <%= render partial: 'blog_header' %>
+
   <section class="index width-wrapper">
     <% @posts.each do |p| %>
       <div class="post">
         <!-- POST HEADER -->
-        <% if p.images.any? %>
-          <div class="post-header large" style="background-image: url('<%= p.images.first.src %>')">
-            <h2 class="title"><%= p.title %></h2>   
-            <div class="gradient"></div>
-          </div>
-        <% else %>
-          <div class="post-header small">
-            <h2 class="title"><%= p.title %></h2>   
-          </div>
+        <%= link_to blog_path(p) do %>
+          <% if p.images.any? %>
+            <div class="post-header large" style="background-image: url('<%= p.images.first.src %>')">
+              <h2 class="title"><%= p.title %></h2>   
+              <div class="gradient"></div>
+            </div>
+          <% else %>
+            <div class="post-header small">
+              <h2 class="title"><%= p.title %></h2>   
+            </div>
+          <% end %>
         <% end %>
 
         <!-- POST DETAIL BAR -->
@@ -28,8 +31,13 @@
 
         <!-- POST CONTENTS -->
         <div class="post-contents">
-          <p><%= Shortcode.process(p.content).html_safe %></p>          
+          <%= Shortcode.process(p.content).html_safe %>
         </div>
+
+        <!-- READ MORE -->
+        <%= link_to "Continue Reading", blog_path(p), class: 'read_more' %>
+
+        <div class="post-footer"></div>
 
       </div>
     <% end %>
