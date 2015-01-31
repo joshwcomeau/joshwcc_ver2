@@ -34,8 +34,43 @@ header.blog-header {
     .o { letter-spacing: -8px; }
   }
 
+  .icons {
+    position: absolute;
+    z-index: 0;
+    top: 1rem;
+    right: 3rem;
+    font-size: 1.5rem;
+
+    a {
+      position: relative;
+      color: #FFF;
+      opacity: 0.65;
+      padding: 0.5rem;
+      animation-duration: 1s !important;  
+      animation-name: fadeInDropMod;
+      animation-fill-mode: backwards;
+      text-shadow: 1px 1px 0px $blue;
+
+      &:hover {
+        opacity: 1 !important;
+      }
+
+      &.icon1 {
+        animation-delay: 0s;
+      }
+      &.icon2 {
+        animation-delay: 0.4s;
+      }
+      &.icon3 {
+        animation-delay: 0.8s;
+      }
+    }
+
+  }
+
   .stripe {
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
@@ -63,22 +98,33 @@ header.blog-header {
   background: $lightblue;
   position: relative;
   height: 100%;
+}
+
+
   
-  //////////////////////////////////// INDEX STYLES
+//////////////////////////////////// INDEX STYLES
+.blog-index-wrapper {
+  @extend .blog-wrapper;
+  // Styles are probably more appropriate on blog-wrapper than here.
+
+
   .index {
     padding: 2rem 0;
   }
 
-  .post-preview {
+  .post {
     position: relative;
     max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem;
+    margin: 1rem auto;
+    padding: 2px;
+    background: #FFF;
 
-    .post-preview-image {
+    .post-header {
       position: relative;
-      height: 10rem;
+      height: 20rem;
+      background-color: $blue;
       background-size: cover;
+      background-position: center center;
 
       .gradient {
         position: absolute;

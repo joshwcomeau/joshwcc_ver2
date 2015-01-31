@@ -1,16 +1,14 @@
-<div class="blog-wrapper">
+<div class="blog-index-wrapper">
   <%= render partial: 'blog_header' %>
+  
   <section class="index width-wrapper">
     <% @posts.each do |p| %>
-      <div class="post-preview">
-        <% if p.images.any? %>
-          <div class="post-preview-image" style="background-image: url('<%= p.images.first.src %>')">
-            <h2 class="title in-image"><%= p.title %></h2>   
-            <div class="gradient"></div>
-          </div>
-        <% else %>
-          <h2 class="title not-in-image"><%= p.title %></h2> 
-        <% end %>
+      <div class="post">
+        <div class="post-header" <%= add_background_style_if_image(p) %>>
+          <h2 class="title in-image"><%= p.title %></h2>   
+          <div class="gradient"></div>
+        </div>
+
         <h6><%= pluralize p.min_read, 'minute' %> to read.</h6>
         <p><%= Shortcode.process(p.content).html_safe %></p>
       </div>
