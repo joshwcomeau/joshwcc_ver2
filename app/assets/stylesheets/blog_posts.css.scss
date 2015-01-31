@@ -129,7 +129,7 @@ header.blog-header {
   .post {
     position: relative;
     
-    margin: 1rem auto;
+    margin: 1rem auto 3rem 0;
     padding: 2px;
     background: #FFF;
 
@@ -153,12 +153,12 @@ header.blog-header {
         z-index: 2;
         width: 100%;
         height: 100%;
-        background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 99%, rgba(0,0,0,0.4) 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(99%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 99%,rgba(0,0,0,0.4) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 99%,rgba(0,0,0,0.4) 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 99%,rgba(0,0,0,0.4) 100%); /* IE10+ */
-        background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 99%,rgba(0,0,0,0.4) 100%); /* W3C */
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.4) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.4) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.4) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.4) 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
       }
 
@@ -169,6 +169,8 @@ header.blog-header {
         padding: 1rem;
         font-size: 3.25rem;
         color: #FFF;
+        text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+        letter-spacing: -2px;
       }
 
     }
@@ -185,7 +187,16 @@ header.blog-header {
       font-size: 1.2rem;
       letter-spacing: -0.6px;
 
+      &:hover {
+        .avatar {
+          transition: 0.3s;
+          zoom: 150%;
+        }
+      }
+
       .avatar {
+        zoom: 125%;
+        transition: 0.6s;
         position: absolute;
         top: -0.5rem;
         left: 1rem;
@@ -215,7 +226,7 @@ header.blog-header {
           z-index: 4;
           left: 0;
           right: 0;
-          top: -0.75rem;
+          top: -0.85rem;
           height: 1.5rem;
           width: 1.5rem;
           margin: auto;
@@ -232,6 +243,15 @@ header.blog-header {
         }
 
       }
+    }
+
+    .post-contents {
+      position: relative;
+      border-top: 4px solid darken($blue, 10%);
+      z-index: 4;
+      background: #FFF;
+      padding: 1.5rem;
+      font-size: 1.5rem;
     }
   }
 

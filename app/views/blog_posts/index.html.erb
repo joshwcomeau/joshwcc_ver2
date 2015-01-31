@@ -22,13 +22,15 @@
 
           <div class="min-read">
             <i class="icon icon-clock"></i>
-            ~<%= pluralize p.min_read, 'minute' %> 
+            <%= pluralize p.min_read, 'minute' %> 
           </div>
         </div>
 
         <!-- POST CONTENTS -->
-        <h6><%= pluralize p.min_read, 'minute' %> to read.</h6>
-        <p><%= Shortcode.process(p.content).html_safe %></p>
+        <div class="post-contents">
+          <p><%= Shortcode.process(p.content).html_safe %></p>          
+        </div>
+
       </div>
     <% end %>
   </section>
