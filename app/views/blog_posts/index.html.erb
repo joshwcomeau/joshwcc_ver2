@@ -21,7 +21,7 @@
         <!-- POST DETAIL BAR -->
         <div class="post-detail-bar">
           <%= image_tag p.user.avatar.src, class: 'avatar' %>
-          Written by <strong class="author">Joshua Comeau</strong> on January 30th 2015.
+          Written by <strong class="author"><%= p.author %></strong> on <%= nice_date(p.created_at) %>.
 
           <div class="min-read">
             <i class="icon icon-clock"></i>
