@@ -1,5 +1,6 @@
 @import 'variables';
 
+//////////////////////////////////// HEADER STYLES
 header.blog-header {
   position: relative;
   background: $blue;
@@ -21,10 +22,10 @@ header.blog-header {
     letter-spacing: -10px;
     font-size: 6rem;
     text-shadow:
-      1px 1px 0px darken($blue, 15%),
-      2px 2px 0px darken($blue, 15%),
-      3px 3px 0px darken($blue, 15%),
-      4px 4px 0px darken($blue, 15%)
+      1px 1px 0px mix(black, $lightblue, 15%),
+      2px 2px 0px mix(black, $lightblue, 17%),
+      3px 3px 0px mix(black, $lightblue, 20%),
+      4px 4px 0px mix(black, $lightblue, 22%)
     ;
 
     .t { letter-spacing: -11px; }
@@ -54,9 +55,78 @@ header.blog-header {
     background: $lightblue;
   }
 }
+//////////////////////////////////// END HEADER
+
+
 
 .blog-wrapper {
   background: $lightblue;
   position: relative;
   height: 100%;
+  
+  //////////////////////////////////// INDEX STYLES
+  .index {
+    padding: 2rem 0;
+  }
+
+  .post-preview {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    .post-preview-image {
+      position: relative;
+      height: 10rem;
+      background-size: cover;
+
+      .gradient {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 99%, rgba(0,0,0,0.4) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(99%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 99%,rgba(0,0,0,0.4) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 99%,rgba(0,0,0,0.4) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 99%,rgba(0,0,0,0.4) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 99%,rgba(0,0,0,0.4) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
+      }
+
+      .title.in-image {
+        position: absolute;
+        z-index: 3;
+        bottom: 0;
+        padding: 0.5rem;
+        color: #FFF;
+      }
+
+    }
+
+    .title {
+      font-size: 3.25rem;
+
+      &.not-in-image {
+        color: $darkgrey;
+      }
+    }
+  }
+
+
+
+
+
+
+  //////////////////////////////////// END INDEX
+
+
+
+
+
+
+
+  //////////////////////////////////// SHOW STYLES
+
+  //////////////////////////////////// END SHOW STYLES
 }
