@@ -1,0 +1,14 @@
+<div class="login-wrapper">
+  <h2>Login</h2>
+
+  <%= form_tag sessions_path do %>
+    <%= text_field_tag :email,    params[:email],    placeholder: 'email'    %>
+    <%= text_field_tag :password, params[:password], placeholder: 'password' %>
+    <%= submit_tag "Log In" %>
+
+    <div class="remember">
+      <%= check_box_tag :remember, true %>
+      <%= label_tag :remember, "Take a good, hard look at my face.", class: 'hidden-xs remember-me' %>
+    </div>
+  <% end %>
+</div>

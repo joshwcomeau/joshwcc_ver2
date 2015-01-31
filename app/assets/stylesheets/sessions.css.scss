@@ -1,0 +1,42 @@
+@import 'variables';
+
+.login-wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 21rem;
+  background: #FFF;
+  text-align: center;
+  margin: 6rem auto;
+  padding-bottom: 6rem;
+  box-shadow: 
+    1px 1px 0px darken($blue, 6%),
+    2px 2px 0px darken($blue, 6%),
+    3px 3px 0px darken($blue, 6%),
+    4px 4px 0px darken($blue, 6%),
+    5px 5px 0px darken($blue, 6%),
+    6px 6px 0px darken($blue, 6%),
+    7px 7px 0px darken($blue, 6%),
+    8px 8px 0px darken($blue, 6%),
+    9px 9px 0px darken($blue, 6%),
+    10px 10px 0px darken($blue, 6%)
+  ;
+
+  h2 {
+    padding: 2rem;
+    margin-bottom: 1rem;
+    background: $darkgrey;
+    color: #FFF;
+  }
+
+  input[type=text], input[type=submit] {
+    position: relative;
+    display: block;
+    margin: 3px auto;
+    padding: 0.4rem;
+    width: 14rem;
+  }
+
+  .remember {
+    margin-top: 2.5rem;
+  }
+}
