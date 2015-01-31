@@ -3,6 +3,7 @@
   <section class="index width-wrapper">
     <% @posts.each do |p| %>
       <div class="post">
+        <!-- POST HEADER -->
         <% if p.images.any? %>
           <div class="post-header large" style="background-image: url('<%= p.images.first.src %>')">
             <h2 class="title"><%= p.title %></h2>   
@@ -12,8 +13,20 @@
           <div class="post-header small">
             <h2 class="title"><%= p.title %></h2>   
           </div>
-          
         <% end %>
+
+        <!-- POST DETAIL BAR -->
+        <div class="post-detail-bar">
+          <img src="https://s3.amazonaws.com/joshwcc/josh_square_face.png" class="avatar"> 
+          Written by <strong class="author">Joshua Comeau</strong> on January 30th 2015.
+
+          <div class="min-read">
+            <i class="icon icon-clock"></i>
+            ~<%= pluralize p.min_read, 'minute' %> 
+          </div>
+        </div>
+
+        <!-- POST CONTENTS -->
         <h6><%= pluralize p.min_read, 'minute' %> to read.</h6>
         <p><%= Shortcode.process(p.content).html_safe %></p>
       </div>
