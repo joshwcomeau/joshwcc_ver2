@@ -8,6 +8,7 @@ ActiveRecord::Base.connection.tables.each { |t| ActiveRecord::Base.connection.re
   email: 'joshwcomeau@gmail.com',
   password: '123'
 })
+@josh.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/josh_square_face.png')
 
 @blog_post_1 =  BlogPost.create({
   abstract: 'A few words describing the post, for the main site.',
