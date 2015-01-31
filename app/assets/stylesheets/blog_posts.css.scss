@@ -121,10 +121,17 @@ header.blog-header {
 
     .post-header {
       position: relative;
-      height: 20rem;
-      background-color: $blue;
-      background-size: cover;
-      background-position: center center;
+
+      &.small {
+        height: 8rem;
+        background-color: $blue;
+      }
+
+      &.large {
+        height: 20rem;
+        background-size: cover;
+        background-position: center center;
+      }
 
       .gradient {
         position: absolute;
@@ -140,22 +147,15 @@ header.blog-header {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
       }
 
-      .title.in-image {
+      .title {
         position: absolute;
         z-index: 3;
         bottom: 0;
-        padding: 0.5rem;
+        padding: 1rem;
+        font-size: 3.25rem;
         color: #FFF;
       }
 
-    }
-
-    .title {
-      font-size: 3.25rem;
-
-      &.not-in-image {
-        color: $darkgrey;
-      }
     }
   }
 
