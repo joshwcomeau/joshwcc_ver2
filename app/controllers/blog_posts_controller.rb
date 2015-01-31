@@ -1,4 +1,5 @@
 class BlogPostsController < ApplicationController
+  before_action :require_login, only: [:new, :create]
   def index
     @posts = BlogPost.all
   end
@@ -6,4 +7,10 @@ class BlogPostsController < ApplicationController
   def show
     @post = BlogPost.find(params[:id])
   end 
+
+  def new
+  end
+
+  def create
+  end
 end

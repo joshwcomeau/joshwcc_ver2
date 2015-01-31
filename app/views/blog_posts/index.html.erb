@@ -5,7 +5,7 @@
     <% @posts.each do |p| %>
       <div class="post">
         <!-- POST HEADER -->
-        <%= link_to blog_path(p) do %>
+        <%= link_to blog_post_path(p) do %>
           <% if p.images.any? %>
             <div class="post-header large" style="background-image: url('<%= p.images.first.src %>')">
               <h2 class="title"><%= p.title %></h2>   
@@ -35,7 +35,7 @@
         </div>
 
         <!-- READ MORE -->
-        <%= link_to "Continue Reading", blog_path(p), class: 'read_more' %>
+        <%= link_to "Continue Reading", blog_post_path(p), class: 'read_more' %>
 
         <div class="post-footer"></div>
 
