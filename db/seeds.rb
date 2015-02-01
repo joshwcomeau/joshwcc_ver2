@@ -14,14 +14,16 @@ ActiveRecord::Base.connection.tables.each { |t| ActiveRecord::Base.connection.re
   abstract: 'A few words describing the post, for the main site.',
   title: 'A Sample Blog Post',
   author: 'The Indefatigable Joshua Comeau',
-  content: "[quote class=\"red\"]Lorem Ipsum is simply dummy text of the printing and typesetting industry.[/quote] Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  content: "<quote>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</quote>
+
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 })
 
 @blog_post_2 = BlogPost.create({
   abstract: 'Today we explore photos and blog posts; the mysterious and symbiotic relationship.',
   title: 'This one has a Photo. Holy cowabungo.',
   author: 'Joshua Comeau',
-  content: "[intro class=\"red\"]Lorem Ipsum is simply dummy text of the printing and typesetting industry.[/intro] Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 })
 
 @blog_post_2.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/cat.jpg', placement: 0)
@@ -54,7 +56,7 @@ Using standard maths, you add the three values together and divide by the number
 
 8 is <em>not</em> the right answer.
 
-[quote]You might think that 24-hour time is the solution, and indeed it would work in this instance. But switch the times to 22, 24 and 2, and we’re back where we started.[/quote]"
+<quote class=\"red\">You might think that 24-hour time is the solution, and indeed it would work in this instance. But switch the times to 22, 24 and 2, and we’re back where we started.</quote>"
 })
 
 @josh.blog_posts << @blog_post_1
