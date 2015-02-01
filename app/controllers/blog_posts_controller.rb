@@ -1,7 +1,7 @@
 class BlogPostsController < ApplicationController
   before_action :require_login, only: [:new, :create]
   def index
-    @posts = BlogPost.all
+    @posts = BlogPost.includes(:images)
   end
 
   def show
