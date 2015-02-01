@@ -20,7 +20,7 @@ gem 'quiet_assets'                  # Hides asset stuff from the console.
 gem 'rails_12factor'                # Heroku wants this.
 gem 'shortcode'                     # Wordpress-style shortcodes
 gem 'sorcery'                       # Simple user authentication.
-gem 'unicorn'                       # better app server.
+gem 'thin'                          # better app server.
 
 group :development, :test do 
   gem 'factory_girl_rails'          # Provides factories for quick creation during tests.
