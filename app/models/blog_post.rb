@@ -2,22 +2,31 @@
 #
 # Table name: blog_posts
 #
-#  id         :integer          not null, primary key
-#  content    :text
-#  abstract   :text
-#  title      :string(255)
-#  author     :string(255)
-#  min_read   :integer
-#  created_at :datetime
-#  updated_at :datetime
-#  user_id    :integer
+#  id           :integer          not null, primary key
+#  content      :text
+#  abstract     :text
+#  title        :string(255)
+#  author       :string(255)
+#  min_read     :integer
+#  created_at   :datetime
+#  updated_at   :datetime
+#  user_id      :integer
+#  featured     :boolean
+#  subtitle     :string(255)
+#  colour       :string(255)
+#  published    :boolean
+#  published_at :datetime
 #
 
 class BlogPost < ActiveRecord::Base
   belongs_to :user
   has_many :images, as: :imageable
 
-  before_validation :calculate_min_read
+  # after_validation :calculate_min_read
+
+  validates :content,   presence: true
+  validates :title,     presence: true
+  
 
   private
   

@@ -41,9 +41,26 @@ ActiveRecord::Base.connection.tables.each { |t| ActiveRecord::Base.connection.re
 
 })
 
+@blog_post_4 = BlogPost.create({
+  title: 'Running in Circles',
+  subtitle: 'Trying to find the average of a circular array',
+  author: 'Mathematician Joshua Comeau',
+  abstract: 'A mathematical look at averaging circular data. A romp through numbers and statistics.',
+  content: "Let’s say you were writing a function that got the ‘average’ time of an event. There are three events: 10AM, 12PM, 2PM.
+
+Intuitively, the average is 12PM. It’s the exact mid-point between the upper value (10AM) and the lower value (2PM).
+
+Using standard maths, you add the three values together and divide by the number of values. (10 + 12 + 2) / 3. Regrettably, this formula returns 8. 
+
+8 is <em>not</em> the right answer.
+
+[quote]You might think that 24-hour time is the solution, and indeed it would work in this instance. But switch the times to 22, 24 and 2, and we’re back where we started.[/quote]"
+})
+
 @josh.blog_posts << @blog_post_1
 @josh.blog_posts << @blog_post_2
 @josh.blog_posts << @blog_post_3
+@josh.blog_posts << @blog_post_4
 
 
 projects = []

@@ -262,8 +262,7 @@ header.blog-header {
       border-top: 4px solid darken($blue, 10%);
       z-index: 4;
       background: #FFF;
-      padding: 1.5rem 1.5rem 4rem 1.5rem;
-      font-size: 1.35rem;
+      padding: 2rem 2rem 4rem 2rem;
     }
 
 
@@ -304,18 +303,75 @@ header.blog-header {
 
 
 
+}
+
+
+//////////////////////////////////// END INDEX
 
 
 
-  //////////////////////////////////// END INDEX
+//////////////////////////////////// POST STYLES  
+//////// These styles are shared between blog#index and blog#show; 
+//////// they're applied to the actual text content of the blog post.
+.post-contents {
+  p {
+    font-size: 1.4rem;      
+    margin-bottom: 1.5rem;
+    line-height: 1.5em;
+    font-weight: 400;
+  }
+}
 
 
 
 
 
 
+//////////////////////////////////// SHOW STYLES
 
-  //////////////////////////////////// SHOW STYLES
+//////////////////////////////////// END SHOW STYLES
 
-  //////////////////////////////////// END SHOW STYLES
+
+//////////////////////////////////// NEW / EDIT STYLES
+.blue-backdrop {
+  background: $blue;
+  padding: 2rem 0;
+}
+.nedit-post-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: $lightgrey;
+
+  h1 {
+    background: $darkgrey;
+    padding: 3rem;
+    color: $yellow;
+    text-align: center;
+  }
+
+  form {
+    padding: 4rem;
+
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 0.6rem;
+    margin: 0.5rem 0;
+    border: 0;
+    border-bottom: 1px solid #DDD;
+  }
+
+  #blog_post_title {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  #blog_post_subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #AAA;
+  }
+
 }
