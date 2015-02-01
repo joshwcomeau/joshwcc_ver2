@@ -9,7 +9,8 @@ class BlogPostsController < ApplicationController
   end 
 
   def new
-    @post = BlogPost.new
+    @post   = BlogPost.new
+    @image  = Image.new 
   end
 
   def create

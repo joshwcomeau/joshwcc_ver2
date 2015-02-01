@@ -333,7 +333,8 @@ header.blog-header {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  background: $lightgrey;
+  background: $lightblue;
+  overflow: auto;
 
   h1 {
     background: $darkgrey;
@@ -342,50 +343,60 @@ header.blog-header {
     text-align: center;
   }
 
-  form {
+  .new-post-form {
     padding: 4rem;
+    width: 75%;
+    float: left;
+  
 
+    input, textarea {
+      outline: none;
+    }
+
+    input[type=text] {
+      width: 100%;
+      padding: 0.6rem;
+      margin: 0.5rem 0;
+      border: 0;
+      border-bottom: 1px solid #DDD;
+    }
+    textarea {
+      width: 100%;
+      height: 50rem;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 0;
+      border-bottom: 1px solid #DDD;
+    }
+
+    #blog_post_title {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    #blog_post_subtitle {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #666;
+    }
+    #blog_post_author {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #666;
+    }
+
+    #blog_post_content {
+      font-size: 1.4rem;      
+      line-height: 1.5em;
+      font-weight: 400;
+    }
   }
 
-  input, textarea {
-    outline: none;
+  .uploads {
+    float: right;
+    width: 25%;
+    height: 100%;
+    padding: 3rem;
+    background: $lightgrey;
+    text-align: center;
   }
-
-  input[type=text] {
-    width: 100%;
-    padding: 0.6rem;
-    margin: 0.5rem 0;
-    border: 0;
-    border-bottom: 1px solid #DDD;
-  }
-  textarea {
-    width: 100%;
-    height: 50rem;
-    padding: 0.75rem;
-    margin: 0.5rem 0;
-    border: 0;
-    border-bottom: 1px solid #DDD;
-  }
-
-  #blog_post_title {
-    font-size: 3rem;
-    font-weight: 700;
-  }
-  #blog_post_subtitle {
-    font-size: 2rem;
-    font-weight: 500;
-    color: #666;
-  }
-  #blog_post_author {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #666;
-  }
-
-  #blog_post_content {
-    font-size: 1.4rem;      
-    line-height: 1.5em;
-    font-weight: 400;
-  }
-
 }

@@ -1,18 +1,27 @@
-<%= form_for @post do |f| %>
-  <% if @post.errors.any? %>
-    <ul>  
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
+<div class="grid">
+  <%= form_for @post, { html: { class: 'new-post-form'} } do |f| %>
+    <% if @post.errors.any? %>
+      <ul>  
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <%= f.text_field :title, placeholder: 'Title' %>
+    <%= f.text_field :subtitle, placeholder: 'Subtitle' %>
+    <%= f.text_field :author, placeholder: 'Author', value: 'Joshua Comeau' %>
+    <%= f.text_area :content, placeholder: 'Write your shit here.' %>
+
+    <%= f.check_box :featured %> <%= f.label :featured %>
+
+    <%= f.submit %>
   <% end %>
 
-  <%= f.text_field :title, placeholder: 'Title' %>
-  <%= f.text_field :subtitle, placeholder: 'Subtitle' %>
-  <%= f.text_field :author, placeholder: 'Author', value: 'Joshua Comeau' %>
-  <%= f.text_area :content, placeholder: 'Write your shit here.' %>
-
-  <%= f.check_box :featured %> <%= f.label :featured %>
-
-  <%= f.submit %>
-<% end %>
+  <div class="uploads">
+    <h3>Uploads</h3> 
+    <%= form_for @image, { html: { class: 'new-upload-form'} } do |f| %>
+          
+    <% end %>
+  </div>
+</div>
