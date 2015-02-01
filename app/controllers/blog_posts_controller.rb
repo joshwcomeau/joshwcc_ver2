@@ -1,5 +1,5 @@
 class BlogPostsController < ApplicationController
-  before_action :require_login, only: [:new, :create]
+  before_action :require_login, except: [:index, :show]
   before_action :fetch_post, only: [:show, :edit, :update, :delete]
   def index
     @posts = BlogPost.includes(:images)
@@ -14,6 +14,8 @@ class BlogPostsController < ApplicationController
 
   def create
     @post = BlogPost.new(post_params)
+    @post.user = current_user
+    
     if @post.save
       redirect_to blog_post_path(@post)
     else
@@ -21,6 +23,8 @@ class BlogPostsController < ApplicationController
       render :new
     end
   end
+
+
 
 
   private
