@@ -31,7 +31,7 @@
 
         <!-- POST CONTENTS -->
         <div class="post-contents">
-          <%= Shortcode.process(p.content).html_safe %>
+          <%= display_snippet(p.content) %>
         </div>
 
         <!-- READ MORE -->

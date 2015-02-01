@@ -10,14 +10,14 @@ ActiveRecord::Base.connection.tables.each { |t| ActiveRecord::Base.connection.re
 })
 @josh.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/josh_square_face.png')
 
-@blog_post_1 =  BlogPost.create({
+@blog_post_1 = BlogPost.create({
   abstract: 'A few words describing the post, for the main site.',
   title: 'A Sample Blog Post',
   author: 'The Indefatigable Joshua Comeau',
   content: "[quote class=\"red\"]Lorem Ipsum is simply dummy text of the printing and typesetting industry.[/quote] Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 })
 
-@blog_post_2 =  BlogPost.create({
+@blog_post_2 = BlogPost.create({
   abstract: 'Today we explore photos and blog posts; the mysterious and symbiotic relationship.',
   title: 'This one has a Photo. Holy cowabungo.',
   author: 'Joshua Comeau',
@@ -26,9 +26,24 @@ ActiveRecord::Base.connection.tables.each { |t| ActiveRecord::Base.connection.re
 
 @blog_post_2.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/cat.jpg', placement: 0)
 
+@blog_post_3 = BlogPost.create({
+  abstract: 'Even more words',
+  title: 'Story of my Life',
+  author: 'Sir Joshua Comeau the first.',
+  content: "It's so lovely out!
+
+  I can't wait to go shopping.
+
+  How are you today?
+
+  I'm hoping that these newlines get turned into p's. What about this, is it a newline?
+  Only a single one, I hope!",
+
+})
 
 @josh.blog_posts << @blog_post_1
 @josh.blog_posts << @blog_post_2
+@josh.blog_posts << @blog_post_3
 
 
 projects = []
