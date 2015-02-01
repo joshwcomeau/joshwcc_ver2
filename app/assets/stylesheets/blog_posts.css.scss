@@ -24,18 +24,18 @@ header.blog-header {
     color: $lightblue;
     letter-spacing: -10px;
     font-size: 6rem;
-    text-shadow:
-      1px 1px 0px mix(black, $lightblue, 19%),
-      2px 2px 0px mix(black, $lightblue, 21%),
-      3px 3px 0px mix(black, $lightblue, 23%),
-      4px 4px 0px mix(black, $lightblue, 26%)
-    ;
+    animation-name: theBlogFlip;
+    animation-delay: 0.25s;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+
 
     .t { letter-spacing: -11px; }
     .h { letter-spacing: -14px; }
     .l { letter-spacing: -14px; }
     .o { letter-spacing: -8px; }
   }
+
 
   .icons {
     position: absolute;

@@ -1,5 +1,36 @@
 @import 'variables';
 
+// Custom Joshw.cc animations
+@keyframes theBlogFlip {
+  0% {
+    bottom: -2.75rem; 
+    transform:  rotateX(90deg);
+    color: mix(black, $lightblue, 25%);
+    text-shadow:
+      1px 1px 0px mix(black, $lightblue, 40%),
+      2px 2px 0px mix(black, $lightblue, 41%),
+      3px 3px 0px mix(black, $lightblue, 43%),
+      4px 4px 0px mix(black, $lightblue, 50%)
+    ;
+
+  }
+
+  100% {
+    bottom: -1.1rem;
+    transform: rotateX(0deg);
+    color: $lightblue;
+    text-shadow:
+      1px 1px 0px mix(black, $lightblue, 19%),
+      2px 2px 0px mix(black, $lightblue, 21%),
+      3px 3px 0px mix(black, $lightblue, 23%),
+      4px 4px 0px mix(black, $lightblue, 26%)
+    ;
+
+  }
+}
+
+
+// Josh's standard library
 @keyframes fadeIn {
   0% {
     opacity: 0;
