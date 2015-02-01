@@ -356,9 +356,21 @@ header.blog-header {
 
   }
 
+  input, textarea {
+    outline: none;
+  }
+
   input[type=text] {
     width: 100%;
     padding: 0.6rem;
+    margin: 0.5rem 0;
+    border: 0;
+    border-bottom: 1px solid #DDD;
+  }
+  textarea {
+    width: 100%;
+    height: 50rem;
+    padding: 0.75rem;
     margin: 0.5rem 0;
     border: 0;
     border-bottom: 1px solid #DDD;
@@ -371,7 +383,18 @@ header.blog-header {
   #blog_post_subtitle {
     font-size: 2rem;
     font-weight: 500;
-    color: #AAA;
+    color: #666;
+  }
+  #blog_post_author {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #666;
+  }
+
+  #blog_post_content {
+    font-size: 1.4rem;      
+    line-height: 1.5em;
+    font-weight: 400;
   }
 
 }

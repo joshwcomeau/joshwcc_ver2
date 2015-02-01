@@ -9,6 +9,10 @@
 
   <%= f.text_field :title, placeholder: 'Title' %>
   <%= f.text_field :subtitle, placeholder: 'Subtitle' %>
+  <%= f.text_field :author, placeholder: 'Author', value: 'Joshua Comeau' %>
+  <%= f.text_area :content, placeholder: 'Write your shit here.' %>
+
+  <%= f.check_box :featured %> <%= f.label :featured %>
 
   <%= f.submit %>
 <% end %>
