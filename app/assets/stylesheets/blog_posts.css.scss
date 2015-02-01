@@ -21,19 +21,39 @@ header.blog-header {
     right: 0;
     bottom: -1.1rem;
     padding: 0 1rem;
-    color: $lightblue;
-    letter-spacing: -10px;
+    letter-spacing: -0.1em;
     font-size: 6rem;
-    animation-name: theBlogFlip;
-    animation-delay: 0.25s;
-    animation-duration: 2s;
-    animation-fill-mode: both;
+    color: $lightblue;
+    cursor: default;
+    transition: 0.4s;
+    text-shadow:
+      1px 1px 0px mix(black, $lightblue, 19%),
+      2px 2px 0px mix(black, $lightblue, 21%),
+      3px 3px 0px mix(black, $lightblue, 23%),
+      4px 4px 0px mix(black, $lightblue, 26%)
+    ;
 
 
-    .t { letter-spacing: -11px; }
-    .h { letter-spacing: -14px; }
-    .l { letter-spacing: -14px; }
-    .o { letter-spacing: -8px; }
+    &:hover {
+      transition: 0.1s;
+      font-size: 7rem;
+      bottom: -0.7rem;
+      left: -2.4rem;
+      color: $yellow;
+      text-shadow:
+        1px 1px 0px mix(black, $yellow, 19%),
+        2px 2px 0px mix(black, $yellow, 21%),
+        3px 3px 0px mix(black, $yellow, 23%),
+        4px 4px 0px mix(black, $yellow, 26%),
+        5px 5px 0px mix(black, $yellow, 28%),
+        6px 6px 0px mix(black, $yellow, 32%)
+      ;
+    }
+
+    .t { letter-spacing: -0.11em; }
+    .h { letter-spacing: -0.15em; }
+    .l { letter-spacing: -0.15em; }
+    .o { letter-spacing: -0.07em; }
   }
 
 
