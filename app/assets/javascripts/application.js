@@ -12,5 +12,7 @@
 //
 //= require jquery-ujs/src/rails
 //= require ngAnimate-animate.css/animate.js
+//= require ng-file-upload/angular-file-upload-shim
+//= require ng-file-upload/angular-file-upload
 //= require percentext/percentext.min.js
 //= require_tree .

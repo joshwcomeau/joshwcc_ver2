@@ -1,4 +1,4 @@
-<div class="grid">
+<div class="grid" ng-controller="NewBlogController as blog">
   <%= form_for @post, { html: { class: 'new-post-form'} } do |f| %>
     <% if @post.errors.any? %>
       <ul>  
@@ -20,8 +20,24 @@
 
   <div class="uploads">
     <h3>Uploads</h3> 
-    <%= form_for @image, { html: { class: 'new-upload-form'} } do |f| %>
-          
-    <% end %>
+    <div 
+    ng-file-select 
+    ng-model="blog.newImage" 
+    accept="image/*"
+    ng-rejected-file-model="rejected"
+    allowDir="true">
+      Upload New Photo
+    </div>
+
+    <button class="photo_box" 
+    ng-file-select 
+    ng-model="blog.newImage" 
+    accept="image/*"
+    ng-rejected-file-model="rejected"
+    allowDir="true"
+    dropAvailable="dropSupported"
+    >
+      +
+    </button>
   </div>
 </div>
