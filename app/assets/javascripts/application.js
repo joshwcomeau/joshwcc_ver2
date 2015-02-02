@@ -15,4 +15,5 @@
 //= require ng-file-upload/angular-file-upload-shim
 //= require ng-file-upload/angular-file-upload
 //= require percentext/percentext.min.js
+//= require highlight.pack
 //= require_tree .

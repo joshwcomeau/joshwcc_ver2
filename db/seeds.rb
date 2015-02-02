@@ -56,7 +56,28 @@ Using standard maths, you add the three values together and divide by the number
 
 8 is <em>not</em> the right answer.
 
-<quote class=\"red\">You might think that 24-hour time is the solution, and indeed it would work in this instance. But switch the times to 22, 24 and 2, and we’re back where we started.</quote>"
+<quote class=\"red\">You might think that 24-hour time is the solution, and indeed it would work in this instance. But switch the times to 22, 24 and 2, and we’re back where we started.</quote>
+
+<hr>
+
+<h2>Mean of Circular Quantities</h2>
+
+Time is considered a circular quantity, because the last value (11:59PM) ‘wraps around’ to the first value (12:00AM). Uncoincidentally, clocks display time as a circle, and not a straight line.
+
+Another form of circular data is degrees. 0° and 360° are the same value. I ran into this problem when building <a href=\"http://www.colourmatch.ca\">ColourMatch</a>, since I needed to find the average Hue of a set of colours, and hue is represented as degrees, with 0° being red, 180° being blue, etc.
+
+<pre><code><!-- _flash_messages.html.erb -->
+  <% if notice && !notice.blank? %>
+    <div class=\"alert alert-success\">
+      <%= notice %>
+    </div>
+  <% end %>
+  <% if alert && !alert.blank? %>
+    <div class=\"alert alert-danger\">
+      <%= alert %>
+    </div>
+  <% end %>
+</pre></code>"
 })
 
 @josh.blog_posts << @blog_post_1

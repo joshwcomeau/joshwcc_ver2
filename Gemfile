@@ -18,7 +18,6 @@ gem 'bower-rails'                   # Front-end package manager.
 gem 'gon'                           # Pass data from Rails to JS in a nice, tidy way
 gem 'quiet_assets'                  # Hides asset stuff from the console.
 gem 'rails_12factor'                # Heroku wants this.
-gem 'shortcode'                     # Wordpress-style shortcodes
 gem 'sorcery'                       # Simple user authentication.
 gem 'thin'                          # better app server.
 
