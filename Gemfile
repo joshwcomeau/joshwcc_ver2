@@ -14,9 +14,8 @@ gem 'spring',                   group: :development
 
 gem 'annotate'                      # Provides Schema-like annotations on the models' rb files.
 gem 'autoprefixer-rails'            # Adds CSS vendor prefixes.
+gem 'aws-s3'                        # Connect to Amazon S3
 gem 'bower-rails'                   # Front-end package manager.
-gem 'carrierwave'                   # File upload management
-gem 'fog'                           # Connect carrierwave to s3
 gem 'gon'                           # Pass data from Rails to JS in a nice, tidy way
 gem 'quiet_assets'                  # Hides asset stuff from the console.
 gem 'rails_12factor'                # Heroku wants this.
