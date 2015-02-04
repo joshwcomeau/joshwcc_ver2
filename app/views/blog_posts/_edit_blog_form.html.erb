@@ -1,5 +1,5 @@
 <div class="grid" ng-controller="NewBlogController as blog">
-  <%= form_for @post, { html: { class: 'new-post-form'} } do |f| %>
+  <%= form_for @post do |f| %>
     <% if @post.errors.any? %>
       <ul>  
         <% @post.errors.full_messages.each do |msg| %>
@@ -20,24 +20,10 @@
 
   <div class="uploads">
     <h3>Uploads</h3> 
-    <div 
-    ng-file-select 
-    ng-model="blog.newImage" 
-    accept="image/*"
-    ng-rejected-file-model="rejected"
-    allowDir="true">
-      Upload New Photo
-    </div>
 
-    <button class="photo_box" 
-    ng-file-select 
-    ng-model="blog.newImage" 
-    accept="image/*"
-    ng-rejected-file-model="rejected"
-    allowDir="true"
-    dropAvailable="dropSupported"
-    >
-      +
-    </button>
+    <%= form_tag('/s3_images', multipart: true) do %>
+      <%= file_field_tag "image" %>
+      <%= submit_tag "upload" %>
+    <% end %>
   </div>
 </div>
