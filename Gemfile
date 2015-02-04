@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Default Rails gems
-gem 'rails', '4.1.2'
+gem 'rails', '4.2'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -14,7 +14,7 @@ gem 'spring',                   group: :development
 
 gem 'annotate'                      # Provides Schema-like annotations on the models' rb files.
 gem 'autoprefixer-rails'            # Adds CSS vendor prefixes.
-gem 'aws-s3'                        # Connect to Amazon S3
+gem 'aws-sdk-v1'                    # Connect to Amazon S3
 gem 'bower-rails'                   # Front-end package manager.
 gem 'gon'                           # Pass data from Rails to JS in a nice, tidy way
 gem 'quiet_assets'                  # Hides asset stuff from the console.
