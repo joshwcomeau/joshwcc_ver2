@@ -4,7 +4,14 @@ function HomeController($scope, $attrs, $sce) {
 
   // Replace me with RSS feed when I don't want to curate the results so badly.
   this.blogPosts = [
+
   {
+    img:    'https://s3.amazonaws.com/joshwcc/blog_efficientreact.jpg',
+    title:  'Efficient React Components',
+    desc:   'Some vital lessons learned about performance, building a word game in React.js with Flux architecture.',
+    date:   'Mar 20th 2015',
+    link:   'https://medium.com/@joshuawcomeau/efficient-nested-react-components-dd9347e9b3f3'
+  }, {
     img:    'https://s3.amazonaws.com/joshwcc/blog_cat.jpg',
     title:  'Search-by-Colour',
     desc:   'Building an algorithm that sees colour as we do. A look at how I built ColourMatch.',
@@ -22,13 +29,15 @@ function HomeController($scope, $attrs, $sce) {
     desc:   'Exploring how to convert legacy javascript callbacks into swanky new promises.',
     date:   'Dec 10th 2014',
     link:   'https://medium.com/@joshuawcomeau/building-promises-73deb49a6f9'
-  }, {
-    img:    'https://s3.amazonaws.com/joshwcc/blog_firstgig.jpg',
-    title:  'My First Developer Gig',
-    desc:   'Some ruminations on my first full-time job as a junior back-end developer.',
-    date:   'Nov 10th 2014',
-    link:   'https://medium.com/@joshuawcomeau/my-first-developer-gig-1c2b6bce3f6d?recommendNoteId=d7ee9e9f89f3'
   }];
+
+  // {
+  //   img:    'https://s3.amazonaws.com/joshwcc/blog_firstgig.jpg',
+  //   title:  'My First Developer Gig',
+  //   desc:   'Some ruminations on my first full-time job as a junior back-end developer.',
+  //   date:   'Nov 10th 2014',
+  //   link:   'https://medium.com/@joshuawcomeau/my-first-developer-gig-1c2b6bce3f6d?recommendNoteId=d7ee9e9f89f3'
+  // }
 
   this.parseAsHTML = function(string) {
     return $sce.trustAsHtml(string);
