@@ -10,81 +10,6 @@ ActiveRecord::Base.connection.tables.each { |t| ActiveRecord::Base.connection.re
 })
 @josh.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/josh_square_face.png')
 
-@blog_post_1 = BlogPost.create({
-  abstract: 'A few words describing the post, for the main site.',
-  title: 'A Sample Blog Post',
-  author: 'The Indefatigable Joshua Comeau',
-  content: "<quote>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</quote>
-
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-})
-
-@blog_post_2 = BlogPost.create({
-  abstract: 'Today we explore photos and blog posts; the mysterious and symbiotic relationship.',
-  title: 'This one has a Photo. Holy cowabungo.',
-  author: 'Joshua Comeau',
-  content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-})
-
-@blog_post_2.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/cat.jpg', placement: 0)
-
-@blog_post_3 = BlogPost.create({
-  abstract: 'Even more words',
-  title: 'Story of my Life',
-  author: 'Sir Joshua Comeau the first.',
-  content: "It's so lovely out!
-
-  I can't wait to go shopping.
-
-  How are you today?
-
-  I'm hoping that these newlines get turned into p's. What about this, is it a newline?
-  Only a single one, I hope!",
-
-})
-
-@blog_post_4 = BlogPost.create({
-  title: 'Running in Circles',
-  subtitle: 'Trying to find the average of a circular array',
-  author: 'Mathematician Joshua Comeau',
-  abstract: 'A mathematical look at averaging circular data. A romp through numbers and statistics.',
-  content: "Let’s say you were writing a function that got the ‘average’ time of an event. There are three events: 10AM, 12PM, 2PM.
-
-Intuitively, the average is 12PM. It’s the exact mid-point between the upper value (10AM) and the lower value (2PM).
-
-Using standard maths, you add the three values together and divide by the number of values. (10 + 12 + 2) / 3. Regrettably, this formula returns 8. 
-
-8 is <em>not</em> the right answer.
-
-<quote class=\"red\">You might think that 24-hour time is the solution, and indeed it would work in this instance. But switch the times to 22, 24 and 2, and we’re back where we started.</quote>
-
-<hr>
-
-<h2>Mean of Circular Quantities</h2>
-
-Time is considered a circular quantity, because the last value (11:59PM) ‘wraps around’ to the first value (12:00AM). Uncoincidentally, clocks display time as a circle, and not a straight line.
-
-Another form of circular data is degrees. 0° and 360° are the same value. I ran into this problem when building <a href=\"http://www.colourmatch.ca\">ColourMatch</a>, since I needed to find the average Hue of a set of colours, and hue is represented as degrees, with 0° being red, 180° being blue, etc.
-
-<pre><code><!-- _flash_messages.html.erb -->
-  <% if notice && !notice.blank? %>
-    <div class=\"alert alert-success\">
-      <%= notice %>
-    </div>
-  <% end %>
-  <% if alert && !alert.blank? %>
-    <div class=\"alert alert-danger\">
-      <%= alert %>
-    </div>
-  <% end %>
-</pre></code>"
-})
-
-@josh.blog_posts << @blog_post_1
-@josh.blog_posts << @blog_post_2
-@josh.blog_posts << @blog_post_3
-@josh.blog_posts << @blog_post_4
-
 
 projects = []
 
@@ -108,7 +33,7 @@ paid.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/detail_paid.jpg'
 projects << paid
 
 
-hb = Project.new({ 
+hb = Project.new({
   display_name:"HungryBelly",
   thumb_path: "https://s3.amazonaws.com/joshwcc/hungrybelly_thumb.png",
   colour: "#3498db",
@@ -127,7 +52,7 @@ hb.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/detail_hungrybelly
 projects << hb
 
 
-cmatch = Project.new({ 
+cmatch = Project.new({
   display_name: "ColourMatch",
   thumb_path: "https://s3.amazonaws.com/joshwcc/colourmatch_thumb.png",
   colour: "#1e1e20",
@@ -145,7 +70,7 @@ cmatch = Project.new({
 cmatch.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/detail_colourmatch.jpg', placement: 0)
 projects << cmatch
 
-clyw = Project.new({ 
+clyw = Project.new({
   display_name: "CLYWmparison",
   thumb_path: "https://s3.amazonaws.com/joshwcc/clywmparison_thumb.png",
   colour: "#643010",
@@ -164,7 +89,7 @@ clyw.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/detail_clywmpari
 projects << clyw
 
 
-percentext = Project.new({ 
+percentext = Project.new({
   display_name: "Percentext",
   thumb_path: "https://s3.amazonaws.com/joshwcc/percentext_thumb.png",
   colour: "#30505c",
@@ -182,7 +107,7 @@ percentext = Project.new({
 percentext.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/detail_percentext.png', placement: 0)
 projects << percentext
 
-schedulr = Project.new({ 
+schedulr = Project.new({
   display_name: "Schedulr",
   thumb_path: "https://s3.amazonaws.com/joshwcc/schedulr_thumb.png",
   colour: "#30a05a",
@@ -200,7 +125,7 @@ schedulr = Project.new({
 schedulr.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/detail_schedulr.jpg', placement: 0)
 projects << schedulr
 
-marsrover = Project.new({ 
+marsrover = Project.new({
   display_name:  "Mars Rover",
   thumb_path: "https://s3.amazonaws.com/joshwcc/marsrover_thumb.png",
   colour: "#3d7a00",
@@ -218,7 +143,7 @@ marsrover = Project.new({
 marsrover.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/detail_marsrover.png', placement: 0)
 projects << marsrover
 
-cgol = Project.new({ 
+cgol = Project.new({
   display_name:  "Conway's Game of Life",
   thumb_path: "https://s3.amazonaws.com/joshwcc/conwaysgameoflife_thumb.png",
   colour: "#cd4923",
@@ -236,7 +161,7 @@ cgol = Project.new({
 cgol.images << Image.new(src: 'https://s3.amazonaws.com/joshwcc/detail_conwaysgameoflife.png', placement: 0)
 projects << cgol
 
-earthy = Project.new({ 
+earthy = Project.new({
   display_name:  "Earthy",
   thumb_path: "https://s3.amazonaws.com/joshwcc/earthy_thumb.png",
   colour: "#345200",
@@ -258,7 +183,7 @@ projects << earthy
 
 projects.reverse.each(&:save)
 
-# { 
+# {
 #     display_name:  "Portfolio",
 #     thumb_path: "portfolio_thumb.png",
 #     colour: "#04bfbf",
@@ -268,5 +193,5 @@ projects.reverse.each(&:save)
 #     project_type: "Personal project",
 #     project_length: "3 days",
 #     integration: nil,
-#     overview: "How's this for breaking the third wall? The site you're on was built over the course of 3 days using Rails and Angular.js" 
-#   }, 
+#     overview: "How's this for breaking the third wall? The site you're on was built over the course of 3 days using Rails and Angular.js"
+#   },
